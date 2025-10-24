@@ -1,0 +1,28 @@
+{
+    "name": "arvins-course-content-writer-marketplace",
+    "owner": {
+        "name": "Arvin",
+        "email": "febrification@gmail.com",
+        "url": "https://github.com/febriy"
+    },
+    "metadata": {
+        "description": "Marketplace for creating educational course content and learning materials.",
+        "version": "1.0.0"
+    },
+    "plugins": [
+        {
+            "name": "course-creation",
+            "source": "./plugins/course-creation",
+            "description": "Commands, Agents, Hooks and Tools for creating course content, lesson plans, and educational materials.",
+            "version": "1.0.0",
+            "category": "education",
+            "keywords": [
+                "education",
+                "course",
+                "learning",
+                "content creation",
+                "teaching"
+            ]
+        }
+    ]
+}

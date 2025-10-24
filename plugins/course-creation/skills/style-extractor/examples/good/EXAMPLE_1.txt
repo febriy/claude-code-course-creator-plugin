@@ -1,0 +1,12 @@
+In this chapter we introduce the transformer, the standard architecture for building large language models. As we discussed in the prior chapter, transformer-based
+large language models have completely changed the field of speech and language
+processing. Indeed, every subsequent chapter in this textbook will make use of them.
+As with the previous chapter, we’ll focus for this chapter on the use of transformers
+to model left-to-right (sometimes called causal or autoregressive) language modeling, in which we are given a sequence of input tokens and predict output tokens one
+by one by conditioning on the prior context.
+The transformer is a neural network with a specific structure that includes a
+mechanism called self-attention or multi-head attention.
+1 Attention can be thought
+of as a way to build contextual representations of a token’s meaning by attending to
+and integrating information from surrounding tokens, helping the model learn how
+tokens relate to each other over large spans.

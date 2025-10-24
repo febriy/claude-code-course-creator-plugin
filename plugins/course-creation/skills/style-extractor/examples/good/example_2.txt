@@ -1,0 +1,84 @@
+People need to know things. So pretty much as soon as there were computers
+we were asking them questions. By 1961 there was a system to answer questions
+about American baseball statistics like “How many games did the Yankees play
+in July?” (Green et al., 1961). Even fictional computers in the 1970s like Deep
+Thought, invented by Douglas Adams in The Hitchhiker’s Guide to the Galaxy,
+answered “the Ultimate Question Of Life, The Universe, and Everything”.1 And
+because so much knowledge is encoded in text, systems were answering questions
+at human-level performance even before LLMs: IBM’s Watson system won the TV
+game-show Jeopardy! in 2011, surpassing humans at answering questions like:
+WILLIAM WILKINSON’S “AN ACCOUNT OF THE
+PRINCIPALITIES OF WALLACHIA AND MOLDOVIA”
+INSPIRED THIS AUTHOR’S MOST FAMOUS NOVEL
+2
+It follows naturally, then, that an important function of large language models is
+to fill human information needs by answering people’s questions. And since a lot
+of information is online, answering questions is closely related to web information
+retrieval, the task performed by search engines. Indeed, the distinction is becoming ever more fuzzy, as modern search engines are integrated with large language
+models.
+Consider some simple information needs, for example factoid questions that factoid
+questions
+can be answered with facts expressed in short texts like the following:
+(11.1) Where is the Louvre Museum located?
+(11.2) Where does the energy in a nuclear explosion come from?
+(11.3) How to get a script l in latex?
+To get an LLM to answer these questions, we can just prompt it! For example a
+pretrained LLM that has been instruction-tuned on question answering (Chapter 9)
+could directly answer the following question
+Where is the Louvre Museum located?
+by performing conditional generation given this prefix, and take the response as the
+answer. This works because large language models have processed a lot of facts in
+their pretraining data, including the location of the Louvre, and have encoded this
+information in their parameters. Factual knowledge of this type seems to be stored
+1 The answer was 42, but unfortunately the question was never revealed.
+2 The answer, of course, is ‘Who is Bram Stoker’, and the novel was Dracula.
+2 CHAPTER 11 • RETRIEVAL-BASED MODELS
+in the connections in the very large feedforward layers of transformer models (Geva
+et al., 2021; Meng et al., 2022).
+Simply prompting an LLM can be a useful approach to answer many factoid
+questions. But the fact that knowledge is stored in the feedforward weights of the
+LLM leads to a number of problems with prompting as a method for correctly answering factual questions.
+The first and main problem is that LLMs often give the wrong answer to factual
+hallucinate questions! Large language models hallucinate. A hallucination is a response that is
+not faithful to the facts of the world. That is, when asked questions, large language
+models sometimes make up answers that sound reasonable. For example, Dahl et al.
+(2024) found that when asked questions about the legal domain (like about particular legal cases), large language models hallucinated from 69% to 88% of the time!
+LLMs sometimes give incorrect factual responses even when the correct facts are
+stored in the parameters; this seems to be caused by the feedforward layers failing
+to recall the knowledge stored in their parameters (Jiang et al., 2024).
+And it’s not always possible to tell when language models are hallucinating,
+calibrated partly because LLMs aren’t well-calibrated. In a calibrated system, the confidence
+of a system in the correctness of its answer is highly correlated with the probability
+of an answer being correct. So if a calibrated system is wrong, at least it might hedge
+its answer or tell us to go check another source. But since language models are not
+well-calibrated, they often give a very wrong answer with complete certainty (Zhou
+et al., 2024).
+A second problem with answering questions with simple prompting methods
+is that prompting a large language model to answer from its pretrained parameters
+doesn’t allow us to ask questions about proprietary data. We would like to use
+language models to answer factual questions about proprietary data like personal
+email. Or for the healthcare application we might want to apply a language model to
+medical records. Or a company may have internal documents that contain answers
+for customer service or internal use. Or legal firms need to ask questions about legal
+discovery from proprietary documents. None of this data (hopefully) was in the
+large web-based corpora that large language models are pretrained on.
+A final issue with using large language models to answer knowledge questions
+is that they are static; they were pretrained once, at a particular time. This means
+that LLMs cannot answer questions about rapidly changing information (like questions about something that happened last week) since they won’t have up-to-date
+information from after their release data.
+One solution to all these problems with simple prompting for answering factual
+questions is to give a language model external sources of knowledge, for example
+proprietary texts like medical or legal records, personal emails, or corporate documents, and to use those documents in answering questions. This method is called
+RAG retrieval-augmented generation or RAG, and that is the method we will focus on
+in this chapter. In RAG we use information retrieval (IR) techniques to retrieve information
+retrieval
+documents that are likely to have information that might help answer the question.
+Then we use a large language model to generate an answer given these documents.
+Basing our answers on retrieved documents can solve some of the problems with
+using simple prompting to answer questions. First, it helps ensure that the answer is
+grounded in facts from some curated dataset. And the system can give the user the
+answer accompanied by the context of the passage or document the answer came
+from. This information can help users have confidence in the accuracy of the answer
+(or help them spot when it is wrong!). And these retrieval techniques can be used on
+11.1 • INFORMATION RETRIEVAL 3
+any proprietary data we want, such as legal or medical data for those applications.

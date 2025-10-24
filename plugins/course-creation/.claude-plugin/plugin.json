@@ -1,0 +1,9 @@
+{
+    "name": "course-creation",
+    "description": "Commands, Agents, Hooks and Tools for creating course content, lesson plans, and educational materials.",
+    "version": "1.0.0",
+    "author": {
+        "name": "Arvin",
+        "email": "febrification@gmail.com"
+    }
+}

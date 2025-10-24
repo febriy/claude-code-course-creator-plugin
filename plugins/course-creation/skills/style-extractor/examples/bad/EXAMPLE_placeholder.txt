@@ -1,0 +1,13 @@
+This is a placeholder file for NEGATIVE examples.
+
+This folder is OPTIONAL but helpful.
+
+Add example text files here that show styles you want to AVOID:
+- Too casual
+- Too formal/academic
+- Too much jargon
+- Condescending tone
+- Overly enthusiastic/marketing-speak
+- Whatever you don't want in your content
+
+The skill will analyze these to create "Don't Do This" sections in your style guide.

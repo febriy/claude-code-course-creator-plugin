@@ -1,0 +1,32 @@
+We know that fluent speakers of a language bring an enormous amount of knowledge to bear during comprehension and production. This knowledge is embodied in
+many forms, perhaps most obviously in the vocabulary, the rich representations we
+have of words and their meanings and usage. This makes the vocabulary a useful
+lens to explore the acquisition of knowledge from text, by both people and machines.
+Estimates of the size of adult vocabularies vary widely both within and across
+languages. For example, estimates of the vocabulary size of young adult speakers of
+American English range from 30,000 to 100,000 depending on the resources used
+2 CHAPTER 7 • LARGE LANGUAGE MODELS
+to make the estimate and the definition of what it means to know a word. A simple consequence of these facts is that children have to learn about 7 to 10 words a
+day, every single day, to arrive at observed vocabulary levels by the time they are 20
+years of age. And indeed empirical estimates of vocabulary growth in late elementary through high school are consistent with this rate. How do children achieve this
+rate of vocabulary growth? Research suggests that the bulk of this knowledge acquisition happens as a by-product of reading. Reading is a process of rich contextual
+processing; we don’t learn words one at a time in isolation. In fact, at some points
+during learning the rate of vocabulary growth exceeds the rate at which new words
+are appearing to the learner! That suggests that every time we read a word, we are
+also strengthening our understanding of other words that are associated with it.
+Such facts are consistent with the distributional hypothesis of Chapter 5, which
+proposes that some aspects of meaning can be learned solely from the texts we encounter over our lives, based on the complex association of words with the words
+they co-occur with (and with the words that those words occur with). The distributional hypothesis suggests both that we can acquire remarkable amounts of knowledge from text, and that this knowledge can be brought to bear long after its initial
+acquisition. Of course, grounding from real-world interaction or other modalities
+can help build even more powerful models, but even text alone is remarkably useful.
+What made the modern NLP revolution possible is that large language models
+can learn all this knowledge of language, context, and the world simply by being
+taught to predict the next word, again and again, based on context, in a (very) large
+corpus of text. In this chapter and the next we formalize this idea that we’ll call
+pretraining pretraining—learning knowledge about language and the world from iteratively
+predicting tokens in vast amounts of text—and call the resulting pretrained models
+large language models. Large language models exhibit remarkable performance on
+natural language tasks because of the knowledge they learn in pretraining.
+What can language models learn from word prediction? Consider the examples
+below. What kinds of knowledge do you think the model might pick up from learning to predict what word fills the underbar (the correct answer is shown in blue)?
+Think about this for each example before you read ahead to the next paragraph:.
