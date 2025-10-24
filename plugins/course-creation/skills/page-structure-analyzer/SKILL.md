@@ -105,7 +105,7 @@ SPECIFIC SUGGESTIONS:
 
 You have access to:
 - `docs/target-audience.md` → Non-technical employees, 0-2 years AI experience
-- `docs/writing-tone.md` → Professional-Direct tone
+- `docs/style-guide.md` → Style and tone guidelines
 - Course structure → 5 modules, ~50 minutes total, self-paced
 
 Evaluate appropriateness for THIS specific audience and format.

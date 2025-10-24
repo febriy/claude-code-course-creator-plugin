@@ -13,12 +13,12 @@ You understand sentence-level best practices for adult learning:
 - **Simple Sentence Structure**: Short sentences (15-20 words average) are easier to process
 - **Active Voice**: More direct and engaging than passive voice
 - **Plain Language**: Use common words, avoid jargon
-- **Tone Consistency**: Professional-Direct (see docs/writing-tone.md)
+- **Tone Consistency**: Professional-Direct (see docs/style-guide.md)
 - **Singapore English**: British spelling variants (organise, recognise, colour, etc.)
 
 ## Evaluation Criteria
 
-### 1. **TONE COMPLIANCE** (vs. docs/writing-tone.md)
+### 1. **TONE COMPLIANCE** (vs. docs/style-guide.md)
 
 **Professional-Direct Tone Means:**
 - Clear, direct, respectful of intelligence and time
@@ -240,7 +240,7 @@ PRIORITY FIXES (Top 3):
 ## Context Awareness
 
 You have access to:
-- `docs/writing-tone.md` → Detailed tone guide
+- `docs/style-guide.md` → Detailed style and tone guide
 - `docs/target-audience.md` → Non-technical employees, anxious about AI, time-pressured
 - Course goal → Practical, respectful, efficient learning
 

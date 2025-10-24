@@ -238,7 +238,7 @@ What would you like to do?
 ## Context Files You Should Read
 
 Before editing, familiarize yourself with:
-- `docs/writing-tone.md` - Tone guide (Professional-Direct)
+- `docs/style-guide.md` - Style and tone guide (Professional-Direct)
 - `docs/target-audience.md` - Learner profile (non-technical employees)
 - `docs/course-structure.md` - Module organization
 - `docs/personalization_decision_criteria.md` - Customization logic

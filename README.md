@@ -18,17 +18,20 @@ This plugin transforms Claude Code into a powerful course development assistant.
 
 ### Slash Commands
 
-Quick-access commands for common course creation tasks:
+**Core Workflow (use in order):**
 
-- `/course-creation:design-course` - Research and design a complete course curriculum from scratch
-- `/course-creation:build-module` - Draft complete module content from an outline
-- `/course-creation:content-review` - Review course content for structure, flow, clarity, and citations
-- `/course-creation:edit-quick` - Quick focused edits on specific issues (tone, citations, flow)
-- `/course-creation:edit-detailed` - Detailed page-by-page, line-by-line editing
-- `/course-creation:fix-from-review` - Fix issues identified in content review reports
-- `/course-creation:refine-syllabus` - Update course syllabus based on feedback
-- `/course-creation:analyze-existing-course` - Reverse-engineer course documentation from existing content
-- `/course-creation:improve-process` - Analyze and improve your course creation workflow
+1. `/course-creation:1-design` - Research and design a complete course curriculum from scratch
+2. `/course-creation:2-build` - Draft complete module content from an outline
+3. `/course-creation:3-review` - Review course content for structure, flow, clarity, and citations
+4. `/course-creation:4-fix` - Fix issues identified in content review reports
+
+**Utilities:**
+
+- `/course-creation:refine` - Update course syllabus based on feedback
+- `/course-creation:edit` - Quick focused edits on specific issues (tone, citations, flow)
+- `/course-creation:edit-deep` - Detailed page-by-page, line-by-line editing
+- `/course-creation:analyze` - Reverse-engineer course documentation from existing content
+- `/course-creation:improve` - Analyze and improve your course creation workflow
 
 ### Skills
 
@@ -71,41 +74,43 @@ Background workers for complex tasks:
 
 ## 💡 How to Use
 
-### Starting a New Course
+### Step 1: Design Your Course
 
 ```bash
-/course-creation:design-course
+/course-creation:1-design
 ```
 Claude will guide you through researching and designing a complete curriculum.
 
-### Building Module Content
+### Step 2: Build Module Content
 
 ```bash
-/course-creation:build-module
+/course-creation:2-build
 ```
-Provide your module outline and Claude will draft the complete content.
+Provide your module number and Claude will draft the complete content.
 
-### Reviewing Your Content
+### Step 3: Review Your Content
 
 ```bash
-/course-creation:content-review
+/course-creation:3-review
 ```
 Get a comprehensive quality report on your course materials.
 
-### Quick Edits
+### Step 4: Fix Issues
 
 ```bash
-/course-creation:edit-quick
+/course-creation:4-fix
 ```
-Fix specific issues like tone, citations, or flow problems.
+Automatically fix issues identified in the review report.
 
 ## 📝 Example Workflow
 
-1. **Design** your course with `/course-creation:design-course`
-2. **Build** each module with `/course-creation:build-module`
-3. **Review** the content with `/course-creation:content-review`
-4. **Fix issues** using `/course-creation:fix-from-review`
-5. **Refine** based on feedback with `/course-creation:refine-syllabus`
+1. `/course-creation:1-design` - Design course structure
+2. `/course-creation:2-build 1` - Build module 1
+3. `/course-creation:2-build 2` - Build module 2
+4. `/course-creation:2-build 3` - Build module 3
+5. `/course-creation:3-review` - Review all content
+6. `/course-creation:4-fix` - Fix identified issues
+7. `/course-creation:refine` - Refine based on feedback (optional)
 
 ## 🛠️ Configuration
 

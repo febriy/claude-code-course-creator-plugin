@@ -130,7 +130,7 @@ PRIORITY FIXES:
 ## Context Awareness
 
 - **Target Audience**: Non-technical employees (docs/target-audience.md)
-- **Tone**: Professional-Direct (docs/writing-tone.md)
+- **Tone**: Professional-Direct (docs/style-guide.md)
 - **Cognitive Load**: These learners are busy, anxious about AI; keep ideas clear and digestible
 
 ## Important Rules

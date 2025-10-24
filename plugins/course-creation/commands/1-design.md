@@ -228,13 +228,13 @@ Run the skill again until flow quality is "Good" or "Excellent."
 
 ### Step 5: Present Proposal
 
-Create a comprehensive proposal document:
+Create a brief, scannable proposal document for user review:
 
 ```markdown
 # COURSE DESIGN PROPOSAL: [Course Title]
 
 **Designed:** [Date]
-**Target Audience:** [Description]
+**Target Audience:** [Brief description]
 **Duration:** [Total time]
 **Delivery Format:** [Self-paced / Instructor-led / Hybrid]
 
@@ -242,19 +242,17 @@ Create a comprehensive proposal document:
 
 ## EXECUTIVE SUMMARY
 
-[2-3 paragraphs explaining:
-- What this course teaches
-- Why it's designed this way
-- How it differs from alternatives
-- Expected learner outcomes]
+**What:** [One sentence - what this course teaches]
+**Why:** [One sentence - why learners need this]
+**How:** [One sentence - pedagogical approach]
+**Outcome:** [One sentence - what learners will achieve]
 
 ---
 
 ## LEARNING OBJECTIVES
 
-By the end of this course, learners will be able to:
-
-1. [Objective 1 - specific, measurable, action-oriented]
+Learners will be able to:
+1. [Objective 1 - specific, measurable]
 2. [Objective 2]
 3. [Objective 3]
 4. [Objective 4]
@@ -280,65 +278,40 @@ By the end of this course, learners will be able to:
 
 ---
 
-## COURSE SYLLABUS
+## MODULE OVERVIEW
 
-### Module 1: [Title] ([X] minutes)
+| # | Module Title | Duration | Key Objectives | Critical Success Factor |
+|---|--------------|----------|----------------|------------------------|
+| 1 | [Title] | [X] min | [1-2 objectives in brief] | [What makes it work] |
+| 2 | [Title] | [X] min | [1-2 objectives in brief] | [What makes it work] |
+| 3 | [Title] | [X] min | [1-2 objectives in brief] | [What makes it work] |
+| **Total** | | **[X] min** | | |
 
-**Learning Objectives:**
-- [Objective 1]
-- [Objective 2]
+**Module Progression Logic:**
+- Module 1 → 2: [How they connect]
+- Module 2 → 3: [How they connect]
+- Module 3 → 4: [How they connect]
 
-**Content Outline:**
-1. Section 1.1: [Topic] ([Y] min)
-   - [What it covers]
-   - Key concepts: [list]
-
-2. Section 1.2: [Topic] ([Y] min)
-   - [What it covers]
-   - Key concepts: [list]
-
-**Key Examples Needed:**
-- [Example 1: specific scenario]
-- [Example 2: specific scenario]
-
-**Assessment:** [Type - quiz, scenario, reflection]
-
-**Critical Success Factors:**
-- [What makes this module effective]
+**Detailed syllabus saved to:** `docs/course-syllabus.md`
 
 ---
 
-### Module 2: [Title] ([X] minutes)
+## DESIGN RATIONALE
 
-[Same structure as Module 1]
+**Pedagogical Approach:** [e.g., Example-driven learning]
+**Why:** [One sentence explaining why this approach fits the audience]
 
----
+**Content Structure Pattern:** [e.g., Hook → Concept → Example → Practice]
+**Why:** [One sentence explaining why this flow works]
 
-[Continue for all modules]
+**Engagement Strategy:** [e.g., Real-world scenarios, industry examples, interactive checks]
+**Why:** [One sentence explaining how this keeps attention]
 
----
+**Assessment Approach:** [e.g., Low-stakes scenario-based checks throughout]
+**Why:** [One sentence explaining why this measurement works]
 
-## INSTRUCTIONAL STRATEGY
-
-**Pedagogical Approach:**
-[e.g., Problem-based learning, Example-driven, Concept-first, etc.]
-
-**Content Structure Pattern:**
-[e.g., Concept → Example → Practice → Application]
-
-**Engagement Mechanisms:**
-- [How you'll keep learners engaged]
-- [Interactive elements]
-- [Real-world connections]
-
-**Assessment Strategy:**
-- [How learning will be measured]
-- [Low-stakes vs high-stakes]
-- [Formative vs summative]
-
-**Customization Approach:**
-- [Where personalization adds value]
-- [What can be adapted to learner context]
+**Customization Strategy:** [e.g., Industry-specific examples]
+**Why:** [One sentence explaining value of personalization]
 
 ---
 
@@ -379,125 +352,70 @@ By the end of this course, learners will be able to:
 
 ## RESEARCH FOUNDATION
 
-This course design is informed by:
+**Total Sources:** [X] (Academic: [A], Industry: [B], Gov't: [C], Learning Science: [D])
 
-**Academic Sources:**
-1. [Source 1: Citation]
-2. [Source 2: Citation]
+**Key Findings:**
+- **[Topic 1]:** [One sentence finding] → [How it influenced design]
+- **[Topic 2]:** [One sentence finding] → [How it influenced design]
+- **[Topic 3]:** [One sentence finding] → [How it influenced design]
 
-**Industry Research:**
-3. [Source 3: Citation]
-4. [Source 4: Citation]
-
-**Government/Institutional:**
-5. [Source 5: Citation]
-
-**Learning Science:**
-6. [Source 6: Citation]
-
-[List all 10-15 sources with full citations]
-
-**Key Findings Applied:**
-- [Finding 1 from research and how it influenced design]
-- [Finding 2 from research and how it influenced design]
-
----
-
-## CUSTOMIZATION OPPORTUNITIES
-
-**Identified Personalization Points:**
-
-1. **[Customization area 1]**
-   - Where: [Module X, Section Y]
-   - What varies: [Industry examples, role-specific scenarios, etc.]
-   - Why it matters: [Increases relevance for learner]
-
-2. **[Customization area 2]**
-   [Same structure]
-
-**Implementation Approach:**
-- [How customization markers will be added]
-- [How intake form will collect learner data]
-
----
-
-## DEVELOPMENT ROADMAP
-
-**Phase 1: Module 1 Development**
-- Research specific topics for Module 1
-- Draft all sections
-- Add examples and citations
-- Review and refine
-- **Estimated time:** [X hours]
-
-**Phase 2: Module 2 Development**
-- [Same structure]
-- **Estimated time:** [X hours]
-
-**Phase 3: Module 3 Development**
-- [Same structure]
-- **Estimated time:** [X hours]
-
-**Total Estimated Development Time:** [X hours]
+**Full research findings saved to:** `docs/research-findings.md`
 
 ---
 
 ## ALTERNATIVE APPROACHES CONSIDERED
 
-**Alternative A: [Different structure]**
-- Approach: [Description]
-- Pros: [Benefits]
-- Cons: [Trade-offs]
-- Why not chosen: [Rationale]
+| Approach | Pros | Cons | Why Not Chosen |
+|----------|------|------|----------------|
+| [Alt A: Description] | [Key benefits] | [Key drawbacks] | [Decisive reason] |
+| [Alt B: Description] | [Key benefits] | [Key drawbacks] | [Decisive reason] |
 
-**Alternative B: [Different approach]**
-- Approach: [Description]
-- Pros: [Benefits]
-- Cons: [Trade-offs]
-- Why not chosen: [Rationale]
+**Why proposed design is better:** [One sentence summary]
 
-**Why the proposed design is better:**
-[Clear explanation of why this design best meets learner needs and objectives]
+---
+
+## DEVELOPMENT ROADMAP
+
+| Phase | Module | Tasks | Est. Time |
+|-------|--------|-------|-----------|
+| 1 | Module 1 | Research → Draft → Examples → Review | [X] hrs |
+| 2 | Module 2 | Research → Draft → Examples → Review | [X] hrs |
+| 3 | Module 3 | Research → Draft → Examples → Review | [X] hrs |
+| 4 | QA & Polish | Full review → Fixes → Final validation | [X] hrs |
+| **Total** | | | **[X] hrs** |
+
+**Next Command:** `/build-module 1` to start development
 
 ---
 
 ## SUCCESS METRICS
 
-**Immediate (During Course):**
-- Completion rate: [Target]%
-- Engagement indicators: [What you'll track]
-- Time-on-task: [Expected range]
-
-**Short-term (1-2 weeks post-course):**
-- Application rate: [X]% use at least one tool
-- Confidence increase: [Measurement approach]
-- Knowledge retention: [Assessment method]
-
-**Long-term (1-3 months post-course):**
-- Sustained usage: [X]% still using tools
-- Time saved: [Measurable outcomes]
-- Attitude shift: [From anxious to confident]
+| Timeframe | Metric | Target | Measurement |
+|-----------|--------|--------|-------------|
+| **During** | Completion rate | [X]% | LMS tracking |
+| | Time-on-task | [Y]-[Z] min | LMS analytics |
+| **1-2 weeks** | Application rate | [X]% use ≥1 tool | Post-course survey |
+| | Confidence gain | [X]pt increase | Pre/post assessment |
+| **1-3 months** | Sustained usage | [X]% still using | Follow-up survey |
+| | Productivity gain | [X]hrs saved/week | Self-reported |
 
 ---
 
 ## NEXT STEPS
 
-**For Your Review:**
-1. Does this syllabus align with your vision?
-2. Are the learning objectives appropriate?
-3. Is the time allocation reasonable?
-4. Any modules to add, remove, or reorder?
-5. Any content priorities to emphasize?
+**Review Questions:**
+1. Does this design align with your vision?
+2. Are objectives appropriate for the audience?
+3. Is time allocation realistic?
+4. Any modules to add/remove/reorder?
 
-**If Approved:**
-- I'll save the final syllabus to `docs/course-syllabus.md`
-- Create detailed module outlines in `docs/module-outlines/`
-- Save research brief to `docs/research-brief.md`
-- Generate development plan in `.claude/temp/development_plan.md`
+**If Approved, I'll Save:**
+- `docs/course-proposal.md` - This full proposal document
+- `docs/course-syllabus.md` - Streamlined implementation reference
+- `docs/module-outlines/module_[N]_outline.md` - Detailed per-module specs
+- `docs/research-findings.md` - Full research sources and findings
 
-**Then you can run:**
-- `/build-module 1` to start developing content
-- `/refine-syllabus "your feedback"` if you want to make changes
+**Then Run:** `/build-module 1` to start content development
 
 ---
 
@@ -527,21 +445,26 @@ Iterate until user approves.
 
 ---
 
-### Step 7: Save Final Syllabus
+### Step 7: Save Final Documents
 
 Once approved, create these files:
 
-#### **1. `docs/course-syllabus.md`**
+#### **1. `docs/course-proposal.md`**
+Save the complete proposal document from Step 5 (with all sections: Executive Summary, Learning Objectives, Target Audience, Module Overview, Design Rationale, Time Allocation, Module Progression Validation, Research Foundation, Alternative Approaches, Development Roadmap, Success Metrics, Next Steps).
+
+This is the comprehensive design presentation document for stakeholder buy-in.
+
+---
+
+#### **2. `docs/course-syllabus.md`**
 ```markdown
 # [Course Title] - Course Syllabus
 
-**Version:** 1.0
-**Last Updated:** [Date]
-**Total Duration:** [X] minutes
+**Version:** 1.0 | **Updated:** [Date] | **Duration:** [X] minutes | **Format:** [Self-paced/Live]
 
 ## Course Overview
 
-[Brief description]
+[2-3 sentence description of what this course teaches and who it's for]
 
 ## Learning Objectives
 
@@ -549,19 +472,34 @@ Once approved, create these files:
 2. [Objective 2]
 3. [Objective 3]
 
-## Modules
+## Module Structure
 
-### Module 1: [Title] ([X] minutes)
-**Objectives:** [List]
-**Sections:** [List]
+| # | Module Title | Duration | Learning Objectives | Sections |
+|---|--------------|----------|---------------------|----------|
+| 1 | [Title] | [X] min | • [Obj 1]<br>• [Obj 2] | [N].1: [Title]<br>[N].2: [Title] |
+| 2 | [Title] | [X] min | • [Obj 1]<br>• [Obj 2] | [N].1: [Title]<br>[N].2: [Title] |
+| 3 | [Title] | [X] min | • [Obj 1]<br>• [Obj 2] | [N].1: [Title]<br>[N].2: [Title] |
 
-### Module 2: [Title] ([X] minutes)
-[Same structure]
+**Total:** [X] modules, [Y] sections, [Z] minutes
 
-[Continue for all modules]
+## Time Allocation
+
+| Module | Duration | % of Total |
+|--------|----------|------------|
+| Module 1 | [X] min | [Y]% |
+| Module 2 | [X] min | [Y]% |
+| Module 3 | [X] min | [Y]% |
+
+---
+
+**See also:** `docs/course-proposal.md` for full design rationale
 ```
 
-#### **2. `docs/module-outlines/module_[N]_outline.md`** (one per module)
+This is the streamlined reference document for implementation.
+
+---
+
+#### **3. `docs/module-outlines/module_[N]_outline.md`** (one per module)
 ```markdown
 # Module [N]: [Title]
 
@@ -613,7 +551,7 @@ This module succeeds when learners can:
 ## Development Notes
 
 **Writing guidance:**
-- Follow docs/writing-tone.md (Professional-Direct)
+- Follow docs/style-guide.md (Professional-Direct)
 - Target audience: [Reminder of who they are]
 - Time target: [X] minutes = ~[Y] words at 200-250 wpm
 
@@ -625,9 +563,9 @@ This module succeeds when learners can:
 - [Where personalization could help]
 ```
 
-#### **3. `docs/research-brief.md`**
+#### **4. `docs/research-findings.md`**
 ```markdown
-# Research Brief - [Course Title]
+# Research Findings - [Course Title]
 
 **Research Date:** [Date]
 **Total Sources:** [Count]
@@ -668,7 +606,7 @@ This module succeeds when learners can:
 [Any region-specific findings that influenced design]
 ```
 
-#### **4. `.claude/temp/development_plan.md`**
+#### **5. `.claude/temp/development_plan.md`**
 ```markdown
 # Development Plan - [Course Title]
 

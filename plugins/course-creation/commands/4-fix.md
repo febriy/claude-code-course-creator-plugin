@@ -94,7 +94,7 @@ Look for: `docs/style-guide.md`
 - Agents should align all fixes with documented style patterns
 
 **If style guide DOES NOT exist:**
-- Agents will use default tone guidelines from `docs/writing-tone.md`
+- Agents will use default Professional-Direct tone guidelines
 - Consider recommending user run `Skill style-extractor` after fixes complete
 
 ---
@@ -121,8 +121,8 @@ Task tool with subagent_type=editor-agent, prompt:
 
 - This is EDIT MODE - make actual file changes using Edit tool
 - Fix ONLY the issues listed above
-- **STYLE GUIDE:** [If exists] Read docs/style-guide.md and ensure all fixes align with documented style patterns
-- Follow docs/writing-tone.md for tone
+- **STYLE GUIDE:** Read docs/style-guide.md if it exists and ensure all fixes align with documented style patterns
+- Follow Professional-Direct tone (clear, factual, respectful)
 - Use Singapore English spelling throughout
 - Preserve all existing content structure unless specifically instructed
 - For citation fixes:

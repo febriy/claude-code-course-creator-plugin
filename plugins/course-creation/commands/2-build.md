@@ -43,7 +43,7 @@ Extract:
 
 Also read for context:
 - `docs/course-syllabus.md` (understand where this module fits)
-- `docs/writing-tone.md` (tone requirements)
+- `docs/style-guide.md` (style and tone requirements)
 - `docs/target-audience.md` (who you're writing for)
 
 If outline file doesn't exist, inform user:
@@ -88,76 +88,102 @@ Before building Module [N], let's confirm the writing style to use.
 
 **If style guide DOES NOT exist:**
 ```
-⚠️ No custom style guide found.
+🛑 **PAUSE: No style guide found**
 
-💡 **RECOMMENDED: Create a style guide first**
+For consistent, high-quality content, you should create a style guide first.
 
-The `style-extractor` skill can learn your desired writing style from example texts.
+---
 
-**Benefits:**
-- Ensures consistency with existing content
-- Gives clear guidelines for writing
-- Allows me to match your preferred tone/structure
-- Helps maintain quality across modules
+## ⚡ **Quick Setup (5 minutes):**
 
-**To create a style guide:**
+### **Step 1: Add Example Text**
+Add 3-10 examples of writing you like:
+- Copy text files to: `.claude/skills/style-extractor/examples/good/`
+- Can be: previous courses, articles you wrote, documentation you like
+- More examples = better style matching
 
-1. Add 3-10 example text files to: `.claude/skills/style-extractor/examples/good/`
-   - Example: Copy your best sections from Module 2
-   - `cp content/2_2_*.md .claude/skills/style-extractor/examples/good/`
+**Don't have examples?** You can:
+- Use this course's outline as an example
+- Copy text from other courses you admire
+- Skip for now and build Module 1 first (use it as example later)
 
-2. (Optional) Add 2-5 "bad" examples to: `.claude/skills/style-extractor/examples/bad/`
-   - Example: Casual blog posts, overly academic writing, etc.
+### **Step 2: Run Style Extractor**
+In a new message, type:
+```
+Skill style-extractor
+```
 
-3. Run: `Skill style-extractor`
+This will analyze your examples and create `docs/style-guide.md`
 
-4. Review generated guide in: `docs/style-guide.md`
-
-**What would you like to do?**
-- Type "Create guide" - I'll pause while you add examples and run the skill
-- Type "Use default" - I'll follow docs/writing-tone.md only (less customized)
-- Type "Describe style" - Tell me your style preferences in words
+### **Step 3: Come Back Here**
+After the style guide is created, re-run:
+```
+/course-creation:2-build [N]
 ```
 
 ---
 
-### **Option 2: Use Default Tone Guide**
+## 🎯 **Ready to Continue?**
 
-**If user chooses this:**
+**Option A: Create Style Guide Now (RECOMMENDED)**
+- Type **"pause"** - I'll wait while you add examples and run the skill
+- Takes 5 minutes, ensures all modules match your style
+
+**Option B: Skip for Now**
+- Type **"skip"** - I'll use default Professional-Direct guidelines
+- You can create a style guide later and rebuild
+
+**Option C: Describe Your Style**
+- Type **"describe"** - Tell me your preferred style in words
+- Less consistent than Option A, but faster
+
+---
+
+**What would you like to do?** (Type: "pause", "skip", or "describe")
 ```
-📄 Using default tone guide: docs/writing-tone.md
 
-**Style Characteristics:**
-- Tone: Professional-Direct
+---
+
+**If user chooses "skip" (no style guide):**
+```
+✅ **Proceeding with default guidelines**
+
+**Style I'll use:**
+- Tone: Professional-Direct (clear, factual, respectful)
 - Audience: [From target-audience.md]
-- Structure: [From writing-tone.md]
+- Structure: Standard educational format
+- Singapore English spelling
 
-**Note:** For more customized style matching, consider creating a style guide with the `style-extractor` skill later.
+**Note:** You can create a style guide anytime and rebuild modules to match.
 
-**Proceed with this approach?**
-- Type "Yes" to continue
-- Type "No" to choose different option
+**Proceeding to structural options...**
 ```
 
 ---
 
-### **Option 3: User Describes Desired Style**
-
-**If user provides description:**
+**If user chooses "describe" (custom verbal description):**
 ```
-**Your Style Preferences:**
+📝 **Describe Your Desired Style**
+
+Tell me your style preferences. For example:
+- "Short paragraphs, conversational tone, lots of examples"
+- "Academic but accessible, with clear definitions"
+- "Practical and actionable, minimal theory"
+
+**Your style description:**
+[Wait for user input]
+
+---
+
+✅ **Got it! I'll write using:**
 [User's description]
 
-I'll follow these guidelines when writing Module [N].
+**Note:** For consistency across all modules, consider:
+1. Let me draft Module [N] using this style
+2. If you like it, add Module [N] to `examples/good/`
+3. Run `Skill style-extractor` to create reusable guide
 
-**Note:** To make this reusable for future modules, consider running:
-1. `Skill style-extractor` after I draft Module [N]
-2. Add Module [N] sections to `examples/good/`
-3. This will create a style guide for future modules
-
-**Proceed with described style?**
-- Type "Yes" to continue
-- Type "Refine" to adjust style description
+**Proceeding to structural options...**
 ```
 
 ---
@@ -548,8 +574,8 @@ Once user approves the sample section, draft ALL remaining sections for the modu
 
 #### **Writing Guidelines:**
 
-**A. Follow Tone Guide**
-- Read and strictly follow `docs/writing-tone.md`
+**A. Follow Style Guide**
+- Read and strictly follow `docs/style-guide.md`
 - Professional-Direct tone (not casual, not condescending)
 - Clear, factual, respectful of learner intelligence
 - No excessive enthusiasm or motivational language
@@ -765,8 +791,8 @@ User might say:
 **"Add more examples to Section [Y]"**
 → Research additional examples, update that section
 
-**"This doesn't match the tone guide"**
-→ Review tone guide again, revise problematic sections
+**"This doesn't match the style guide"**
+→ Review style guide again, revise problematic sections
 
 **"Too long, reduce by 200 words"**
 → Identify least critical content, trim while preserving key points
