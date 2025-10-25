@@ -7,8 +7,8 @@ Launch a **general-purpose agent** to research, design structure options, and dr
 ## Prerequisites
 
 You should have:
-- Completed course syllabus (from `/design-course`)
-- Module outline in `docs/module-outlines/module_[N]_outline.md`
+- Completed course syllabus (from `/design-course {COURSE_NAME}`)
+- Module outline in `courses/{COURSE_NAME}/docs/module-outlines/module_[N]_outline.md`
 
 ## How It Works
 
@@ -20,17 +20,21 @@ The agent will:
 5. **Draft ONE sample section** for your approval
 6. **Iterate on sample** until you're happy with style/tone/depth
 7. **Draft all remaining sections** using approved sample as template
-8. **Save content files** to `content/` directory
+8. **Save content files** to `courses/{COURSE_NAME}/content/` directory
 9. **Present for final review**
 
 ## Task for the Agent
 
-When the user runs `/build-module [N]`, you (the general-purpose agent) should develop complete content for that module.
+When the user runs `/build-module {COURSE_NAME} [N]`, you (the general-purpose agent) should develop complete content for that module.
+
+**Extract the course name from the user's input:**
+- Example: `/build-module my-ai-course 2` → Course name is "my-ai-course", Module number is 2
+- If course name missing, ask: "Which course are you building this module for?"
 
 ### Step 1: Read Module Outline
 
 Read the module outline file:
-- `docs/module-outlines/module_[N]_outline.md`
+- `courses/{COURSE_NAME}/docs/module-outlines/module_[N]_outline.md`
 
 Extract:
 - Module title and duration
@@ -42,13 +46,13 @@ Extract:
 - Prerequisites (what learners know from previous modules)
 
 Also read for context:
-- `docs/course-syllabus.md` (understand where this module fits)
-- `docs/style-guide.md` (style and tone requirements)
-- `docs/target-audience.md` (who you're writing for)
+- `courses/{COURSE_NAME}/docs/course-syllabus.md` (understand where this module fits)
+- `courses/{COURSE_NAME}/docs/style-guide.md` (style and tone requirements)
+- `courses/{COURSE_NAME}/docs/target-audience.md` (who you're writing for)
 
 If outline file doesn't exist, inform user:
 ```
-❌ Module outline not found. Please run /design-course first to create course structure.
+❌ Module outline not found. Please run /design-course {COURSE_NAME} first to create course structure.
 ```
 
 ---
@@ -69,7 +73,7 @@ Before building Module [N], let's confirm the writing style to use.
 ### **Option 1: Use Existing Style Guide**
 
 **Check if style guide exists:**
-- Looking for: `docs/style-guide.md`
+- Looking for: `courses/{COURSE_NAME}/docs/style-guide.md`
 
 **If style guide EXISTS:**
 ```
@@ -113,12 +117,12 @@ In a new message, type:
 Skill style-extractor
 ```
 
-This will analyze your examples and create `docs/style-guide.md`
+This will analyze your examples and create `courses/{COURSE_NAME}/docs/style-guide.md`
 
 ### **Step 3: Come Back Here**
 After the style guide is created, re-run:
 ```
-/course-creation:2-build [N]
+/course-creation:build-module {COURSE_NAME} [N]
 ```
 
 ---
@@ -191,8 +195,8 @@ Tell me your style preferences. For example:
 **Wait for user decision before proceeding.**
 
 **Record style choice:**
-- If using style guide: Note path to guide file
-- If using default: Note reliance on docs/writing-tone.md
+- If using style guide: Note path to guide file (`courses/{COURSE_NAME}/docs/style-guide.md`)
+- If using default: Note reliance on standard Professional-Direct guidelines
 - If using description: Save user's style description
 
 This will be referenced throughout content generation.
@@ -575,7 +579,7 @@ Once user approves the sample section, draft ALL remaining sections for the modu
 #### **Writing Guidelines:**
 
 **A. Follow Style Guide**
-- Read and strictly follow `docs/style-guide.md`
+- Read and strictly follow `courses/{COURSE_NAME}/docs/style-guide.md`
 - Professional-Direct tone (not casual, not condescending)
 - Clear, factual, respectful of learner intelligence
 - No excessive enthusiasm or motivational language
@@ -653,13 +657,13 @@ Section [N].[X]: [Section Title] ([Y] minutes)
 
 Save each section as:
 ```
-content/[MODULE]_[SECTION]_[description].md
+courses/{COURSE_NAME}/content/[MODULE]_[SECTION]_[description].md
 ```
 
-Examples:
-- `content/4_1_intro.md`
-- `content/4_2_prompt_basics.md`
-- `content/4_3_use_cases.md`
+Examples (for course "my-ai-course"):
+- `courses/my-ai-course/content/4_1_intro.md`
+- `courses/my-ai-course/content/4_2_prompt_basics.md`
+- `courses/my-ai-course/content/4_3_use_cases.md`
 
 ---
 
@@ -715,13 +719,13 @@ Show summary of what was created:
 
 ## FILES CREATED
 
-1. `content/[N]_1_[description].md` ([W] words, ≈ [T] min)
+1. `courses/{COURSE_NAME}/content/[N]_1_[description].md` ([W] words, ≈ [T] min)
    - [Brief summary of what this section covers]
 
-2. `content/[N]_2_[description].md` ([W] words, ≈ [T] min)
+2. `courses/{COURSE_NAME}/content/[N]_2_[description].md` ([W] words, ≈ [T] min)
    - [Brief summary]
 
-3. `content/[N]_3_[description].md` ([W] words, ≈ [T] min)
+3. `courses/{COURSE_NAME}/content/[N]_3_[description].md` ([W] words, ≈ [T] min)
    - [Brief summary]
 
 [List all sections]
@@ -760,8 +764,8 @@ Show summary of what was created:
 
 **Option 1: Approve and Continue**
 - Files are saved and ready for review
-- Run `/content-review module [N]` to check quality
-- Proceed to next module with `/build-module [N+1]`
+- Run `/content-review {COURSE_NAME}` to check quality
+- Proceed to next module with `/build-module {COURSE_NAME} [N+1]`
 
 **Option 2: Edit Specific Sections**
 - Tell me which section needs changes and what to adjust
@@ -842,9 +846,9 @@ Handle iteratively until user is satisfied.
 
 **Standard usage:**
 ```bash
-/build-module 2
+/build-module my-ai-course 2
 ```
-Agent reads Module 2 outline, researches, presents 3 structural options, user selects, agent drafts all sections.
+Agent reads Module 2 outline for "my-ai-course", researches, presents 3 structural options, user selects, agent drafts all sections.
 
 **After feedback:**
 ```
@@ -863,12 +867,12 @@ Agent: Regenerates all sections using Example-Driven structure.
 ## Success Criteria
 
 This command succeeds when:
-- ✅ All sections drafted and saved to `content/` directory
+- ✅ All sections drafted and saved to `courses/{COURSE_NAME}/content/` directory
 - ✅ Content follows tone guide and structure patterns
 - ✅ Citations added (or [RESEARCH NEEDED] placeholders)
 - ✅ Word count matches duration target ±10%
 - ✅ Singapore English spelling throughout
 - ✅ User approves the content
-- ✅ Module ready for quality review via `/content-review`
+- ✅ Module ready for quality review via `/content-review {COURSE_NAME}`
 
 The module is now ready for review and refinement.

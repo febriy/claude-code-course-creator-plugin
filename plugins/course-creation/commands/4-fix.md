@@ -6,7 +6,11 @@ Launch multiple **editor-agent** instances in parallel to fix issues identified 
 
 ## Prerequisites
 
-You must have recently run `/content-review` which generated a report. This command reads that report and fixes the issues.
+You must have recently run `/content-review {COURSE_NAME}` which generated a report. This command reads that report and fixes the issues.
+
+Extract the course name from the user's input:
+- Example: `/fix my-ai-course` → Course is "my-ai-course"
+- If course name missing, ask: "Which course would you like to fix issues for?"
 
 ## How It Works
 
@@ -37,16 +41,16 @@ When the user runs `/fix-from-review`, you should:
 
 **Option A: User specifies report path**
 ```
-/fix-from-review .claude/temp/module_2_content_review_report.md
+/fix my-ai-course .claude/temp/my-ai-course_module_2_review_report.md
 ```
 
 **Option B: Auto-detect most recent report**
 ```
-/fix-from-review
+/fix my-ai-course
 ```
 Look for the most recent file matching:
-- `.claude/temp/*review_report.md`
-- `.claude/temp/module_*_content_review_report.md`
+- `.claude/temp/{COURSE_NAME}_*review_report.md`
+- `.claude/temp/{COURSE_NAME}_module_*_review_report.md`
 
 Sort by modification time, use the newest.
 
@@ -71,13 +75,13 @@ Extract from the report:
 
 Example parsing:
 ```
-Section 3 (content/2_3_speech_to_text.md):
+Section 3 (courses/{COURSE_NAME}/content/2_3_speech_to_text.md):
 - Add numbered citations [1-5] to research claims
 - Correct 3 Singapore English spelling errors
 - Update time estimate from 2 min to 4 min
 - Shorten bias explanation (lines 65-73)
 
-Section 4 (content/2_4_understanding_bias.md):
+Section 4 (courses/{COURSE_NAME}/content/2_4_understanding_bias.md):
 - Add numbered citations [1-7] to research claims
 - Correct 5 Singapore English spelling errors
 - Add section headers for topic shifts (lines 37, 53)
@@ -87,7 +91,7 @@ Section 4 (content/2_4_understanding_bias.md):
 
 **Before launching editor-agents, check if a style guide exists:**
 
-Look for: `docs/style-guide.md`
+Look for: `courses/{COURSE_NAME}/docs/style-guide.md`
 
 **If style guide EXISTS:**
 - Include instruction to read and follow the style guide in ALL agent prompts
@@ -121,7 +125,7 @@ Task tool with subagent_type=editor-agent, prompt:
 
 - This is EDIT MODE - make actual file changes using Edit tool
 - Fix ONLY the issues listed above
-- **STYLE GUIDE:** Read docs/style-guide.md if it exists and ensure all fixes align with documented style patterns
+- **STYLE GUIDE:** Read courses/{COURSE_NAME}/docs/style-guide.md if it exists and ensure all fixes align with documented style patterns
 - Follow Professional-Direct tone (clear, factual, respectful)
 - Use Singapore English spelling throughout
 - Preserve all existing content structure unless specifically instructed
@@ -202,10 +206,10 @@ Example:
 ⚠️ About to launch parallel editor-agents to fix HIGH priority issues:
 
 Files to modify:
-- content/2_3_speech_to_text.md (~8 edits)
-- content/2_4_understanding_bias.md (~12 edits)
-- content/2_5_agi_vs_narrow.md (~5 edits)
-- content/2_6_ai_domains.md (~4 edits)
+- courses/{COURSE_NAME}/content/2_3_speech_to_text.md (~8 edits)
+- courses/{COURSE_NAME}/content/2_4_understanding_bias.md (~12 edits)
+- courses/{COURSE_NAME}/content/2_5_agi_vs_narrow.md (~5 edits)
+- courses/{COURSE_NAME}/content/2_6_ai_domains.md (~4 edits)
 
 Total: 4 files, ~29 edits
 
@@ -230,19 +234,19 @@ Proceed with parallel fixes? [Yes/No]
 
 **Standard usage:**
 ```
-/content-review module 2
+/content-review my-ai-course module 2
 [Review report generated]
 
-/fix-from-review
+/fix my-ai-course
 [All HIGH priority issues fixed in parallel]
 ```
 
 **After manual edits:**
 ```
-/content-review content/2_3_speech_to_text.md
+/content-review my-ai-course courses/my-ai-course/content/2_3_speech_to_text.md
 [Review finds 5 issues]
 
-/fix-from-review
+/fix my-ai-course
 [Single file fixed]
 ```
 

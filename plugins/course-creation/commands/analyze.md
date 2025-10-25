@@ -6,8 +6,12 @@ Launch a **general-purpose agent** to analyze your existing course content and g
 
 ## Prerequisites
 
+Extract the course name from the user's input:
+- Example: `/analyze my-ai-course` → Course is "my-ai-course"
+- If course name missing, ask: "Which course would you like to analyze?"
+
 You should have:
-- Existing content files in `content/` directory
+- Existing content files in `courses/{COURSE_NAME}/content/` directory
 - Some content already written (even if incomplete)
 
 ## Use Case
@@ -24,17 +28,17 @@ You should have:
 ## How It Works
 
 The agent will:
-1. **Scan existing content** in `content/` directory
+1. **Scan existing content** in `courses/{COURSE_NAME}/content/` directory
 2. **Extract course structure** (modules, topics, objectives)
 3. **Analyze citations** to build research brief
 4. **Reverse-engineer module outlines** from content
 5. **Generate syllabus** matching existing structure
 6. **Present documentation** for your review
-7. **Save to `docs/`** for future workflow
+7. **Save to `courses/{COURSE_NAME}/docs/`** for future workflow
 
 ## Task for the Agent
 
-When the user runs `/analyze-existing-course`, you (the general-purpose agent) should analyze existing content and generate course documentation.
+When the user runs `/analyze {COURSE_NAME}`, you (the general-purpose agent) should analyze existing content and generate course documentation.
 
 ---
 
@@ -42,8 +46,8 @@ When the user runs `/analyze-existing-course`, you (the general-purpose agent) s
 
 **Read all content files:**
 ```bash
-# Find all markdown files in content/
-content/*.md
+# Find all markdown files in courses/{COURSE_NAME}/content/
+courses/{COURSE_NAME}/content/*.md
 ```
 
 **For each file, extract:**
@@ -244,7 +248,7 @@ Create comprehensive syllabus matching existing content:
 
 ## GENERATION NOTE
 
-This syllabus was reverse-engineered from existing course content in `content/` directory.
+This syllabus was reverse-engineered from existing course content in `courses/{COURSE_NAME}/content/` directory.
 - Analyzed [X] modules, [Y] sections
 - Extracted [Z] learning objectives
 - Identified [A] citations
@@ -390,7 +394,7 @@ By the end of this course, learners will be able to:
 2. **Create style guide** (if not exists)
    ```bash
    # Copy best existing sections as examples
-   cp content/2_*.md .claude/skills/style-extractor/examples/good/
+   cp courses/{COURSE_NAME}/content/2_*.md .claude/skills/style-extractor/examples/{COURSE_NAME}/good/
 
    # Generate style guide
    Skill style-extractor
@@ -581,7 +585,7 @@ Show comprehensive analysis:
 ```markdown
 ## ✅ EXISTING COURSE ANALYZED
 
-**Content Scanned:** [X] files in `content/` directory
+**Content Scanned:** [X] files in `courses/{COURSE_NAME}/content/` directory
 
 ---
 
@@ -667,11 +671,11 @@ Show comprehensive analysis:
 I've created formal course documentation based on your existing content:
 
 **✅ Created:**
-- `docs/course-syllabus.md` - Reverse-engineered course structure
-- `docs/module-outlines/module_[N]_outline.md` - One per module found
-- `docs/research-brief.md` - Compiled from existing citations
+- `courses/{COURSE_NAME}/docs/course-syllabus.md` - Reverse-engineered course structure
+- `courses/{COURSE_NAME}/docs/module-outlines/module_[N]_outline.md` - One per module found
+- `courses/{COURSE_NAME}/docs/research-brief.md` - Compiled from existing citations
 
-**These files now exist in `docs/` for easy review.**
+**These files now exist in `courses/{COURSE_NAME}/docs/` for easy review.**
 
 ---
 
@@ -680,25 +684,25 @@ I've created formal course documentation based on your existing content:
 **1. Review Generated Documentation**
 ```bash
 # Check reverse-engineered syllabus
-cat docs/course-syllabus.md
+cat courses/{COURSE_NAME}/docs/course-syllabus.md
 
 # Check module outlines
-ls docs/module-outlines/
+ls courses/{COURSE_NAME}/docs/module-outlines/
 
 # Check research brief
-cat docs/research-brief.md
+cat courses/{COURSE_NAME}/docs/research-brief.md
 ```
 
 **2. Create Style Guide** (if not exists)
 ```bash
 # Use existing content as examples
-cp content/2_2_*.md .claude/skills/style-extractor/examples/good/
-cp content/2_3_*.md .claude/skills/style-extractor/examples/good/
+cp courses/{COURSE_NAME}/content/2_2_*.md .claude/skills/style-extractor/examples/{COURSE_NAME}/good/
+cp courses/{COURSE_NAME}/content/2_3_*.md .claude/skills/style-extractor/examples/{COURSE_NAME}/good/
 
 # Generate style guide
 Skill style-extractor
 
-# Output: docs/style-guide.md
+# Output: courses/{COURSE_NAME}/docs/style-guide.md
 ```
 
 **3. Refine Syllabus** (optional)
@@ -750,7 +754,7 @@ Skill style-extractor
 
 **Ready to review the generated documentation?**
 ```bash
-cat docs/course-syllabus.md
+cat courses/{COURSE_NAME}/docs/course-syllabus.md
 ```
 
 Or would you like me to refine any part of the analysis?
@@ -781,7 +785,7 @@ Wait for user feedback.
 - **Give clear next steps** - Tell user exactly what to do next
 
 ### File Management
-- **Save to `docs/`** - All generated documentation goes here
+- **Save to `courses/{COURSE_NAME}/docs/`** - All generated documentation goes here
 - **Don't overwrite content** - Content files stay untouched
 - **Create module outlines** - One file per module
 - **Format consistently** - Match format of `/design-course` output
@@ -797,7 +801,7 @@ This command succeeds when:
 - ✅ Citations compiled into research brief
 - ✅ Module outlines created for each module
 - ✅ Formal syllabus generated
-- ✅ All files saved to `docs/`
+- ✅ All files saved to `courses/{COURSE_NAME}/docs/`
 - ✅ User can now use full workflow to improve course
 
 The course now has formal documentation and can be systematically improved using existing commands.

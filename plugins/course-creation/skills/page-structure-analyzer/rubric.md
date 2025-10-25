@@ -179,7 +179,7 @@ If score is <15, focus on lowest-scoring dimensions first:
 
 ### For AI4E Course:
 - **Target audience**: Non-technical employees, anxious about AI
-- **Tone**: Professional-Direct (see `docs/style-guide.md`)
+- **Tone**: Professional-Direct (see `courses/{COURSE_NAME}/docs/style-guide.md`)
 - **Total course time**: ~50 minutes across 5 modules
 - **Module context matters**:
   - Module 1 (intro): Can be shorter, sets expectations

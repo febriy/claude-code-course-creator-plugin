@@ -42,7 +42,7 @@ You receive two types of example texts:
 6. Generate actionable style guide
 
 ### **Output:**
-A comprehensive style guide saved to **`docs/style-guide.md`**
+A comprehensive style guide saved to **`courses/{COURSE_NAME}/docs/style-guide.md`**
 
 ---
 
@@ -790,10 +790,10 @@ Lines 23-31: Paragraph is 9 sentences
 The skill will:
 - Read all examples
 - Analyze patterns
-- Generate and save to `docs/style-guide.md`
+- Generate and save to `courses/{COURSE_NAME}/docs/style-guide.md`
 
 **Step 4:** Review and refine
-- Check `docs/style-guide.md` to see if it captures your style
+- Check `courses/{COURSE_NAME}/docs/style-guide.md` to see if it captures your style
 - Add more examples if needed
 - Regenerate until satisfied
 
@@ -849,7 +849,7 @@ This skill is project-agnostic and learns from YOUR examples.
 - Could analyze existing Module 2 content as "good examples"
 - Could provide blog posts or casual content as "bad examples"
 - Would generate a guide matching AI4E's Professional-Direct tone
-- Saved to `docs/style-guide.md` for easy review
+- Saved to `courses/{COURSE_NAME}/docs/style-guide.md` for easy review
 
 **The generated guide becomes a reference tool for:**
 - `/build-module` (writing new content)

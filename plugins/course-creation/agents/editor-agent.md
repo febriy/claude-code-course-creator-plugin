@@ -238,10 +238,12 @@ What would you like to do?
 ## Context Files You Should Read
 
 Before editing, familiarize yourself with:
-- `docs/style-guide.md` - Style and tone guide (Professional-Direct)
-- `docs/target-audience.md` - Learner profile (non-technical employees)
-- `docs/course-structure.md` - Module organization
-- `docs/personalization_decision_criteria.md` - Customization logic
+- `courses/{COURSE_NAME}/docs/style-guide.md` - Style and tone guide (Professional-Direct)
+- `courses/{COURSE_NAME}/docs/target-audience.md` - Learner profile (non-technical employees)
+- `courses/{COURSE_NAME}/docs/course-structure.md` - Module organization
+- `courses/{COURSE_NAME}/docs/personalization_decision_criteria.md` - Customization logic
+
+**Note:** The {COURSE_NAME} will be provided by the command that invokes this agent.
 
 ## Special Considerations
 

@@ -6,18 +6,24 @@ Use the **editor-agent** subagent to perform detailed editing of content.
 
 This is the most thorough editing mode - the subagent will use all available skills to comprehensively improve content quality.
 
+## Prerequisites
+
+Extract the course name from the user's input:
+- Example: `/edit-detailed my-ai-course module 2` → Course is "my-ai-course"
+- If course name missing, ask: "Which course would you like to edit?"
+
 ## Scope Handling
 
 First, determine the scope:
-- **Single file**: If a file path is provided (e.g., `content/2_3_what_is_ai_section_3.md`)
-- **Module**: If "module X" is specified (e.g., "module 2" means all files matching `content/2_*.md`)
+- **Single file**: If a file path is provided (e.g., `courses/{COURSE_NAME}/content/2_3_what_is_ai_section_3.md`)
+- **Module**: If "module X" is specified (e.g., "module 2" means all files matching `courses/{COURSE_NAME}/content/2_*.md`)
 - **Multiple modules**: If "module X Y" is specified (e.g., "module 3 4")
 
 ## STEP 1: Check for Style Guide
 
 **Before any editing, check if a style guide exists:**
 
-Look for: `docs/style-guide.md`
+Look for: `courses/{COURSE_NAME}/docs/style-guide.md`
 
 **If style guide EXISTS:**
 1. Read it thoroughly
@@ -110,7 +116,7 @@ For each file, present:
 Please review the edited version above.
 
 Options:
-1. ✅ **Approve & Save** - Save the edited version to `content/[filename]`
+1. ✅ **Approve & Save** - Save the edited version to `courses/{COURSE_NAME}/content/[filename]`
 2. 🔄 **Request Changes** - Tell me what to adjust
 3. ❌ **Reject** - Keep original, no changes
 4. ⏭️ **Skip** - Move to next file (if multi-file edit)
@@ -133,6 +139,6 @@ What would you like to do?
 ---
 
 **Usage examples:**
-- `/edit-detailed content/2_3_what_is_ai_section_3.md` → Edit one file thoroughly
-- `/edit-detailed module 2` → Edit all Module 2 files (with duplicate check)
-- `/edit-detailed module 3 4` → Edit Modules 3 & 4 (duplicate check across both)
+- `/edit-detailed my-ai-course courses/my-ai-course/content/2_3_what_is_ai_section_3.md` → Edit one file thoroughly
+- `/edit-detailed my-ai-course module 2` → Edit all Module 2 files (with duplicate check)
+- `/edit-detailed my-ai-course module 3 4` → Edit Modules 3 & 4 (duplicate check across both)

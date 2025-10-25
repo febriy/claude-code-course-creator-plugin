@@ -104,8 +104,8 @@ SPECIFIC SUGGESTIONS:
 ## Context Awareness
 
 You have access to:
-- `docs/target-audience.md` → Non-technical employees, 0-2 years AI experience
-- `docs/style-guide.md` → Style and tone guidelines
+- `courses/{COURSE_NAME}/docs/target-audience.md` → Non-technical employees, 0-2 years AI experience
+- `courses/{COURSE_NAME}/docs/style-guide.md` → Style and tone guidelines
 - Course structure → 5 modules, ~50 minutes total, self-paced
 
 Evaluate appropriateness for THIS specific audience and format.

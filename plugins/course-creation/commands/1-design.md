@@ -25,19 +25,47 @@ The agent will:
 
 ## Task for the Agent
 
-When the user runs `/design-course`, you (the general-purpose agent) should design a complete course curriculum from scratch.
+When the user runs `/design-course {COURSE_NAME}`, you (the general-purpose agent) should design a complete course curriculum from scratch.
 
-### Step 1: Gather Requirements
+### Step 1: Extract Course Name & Setup Folder
+
+**Extract the course name from the user's input.**
+
+**If user provides course name:**
+```
+/design-course my-ai-course "AI literacy for non-technical employees, 50 minutes total"
+```
+Extract `my-ai-course` as the course name.
+
+**If user does NOT provide a course name:**
+```
+/design-course
+```
+Ask: **"What would you like to name this course?"** (e.g., "ai-literacy", "data-science-101", "advanced-ai")
+
+**Naming guidelines:**
+- Use lowercase letters, numbers, and hyphens only
+- Be descriptive but concise (e.g., "ai-for-educators", "python-basics")
+- Avoid spaces or special characters
+
+**Once you have the course name:**
+1. Create the folder structure: `courses/{COURSE_NAME}/docs/`
+2. Create the content folder: `courses/{COURSE_NAME}/content/`
+3. Store the course name as a variable to use throughout the process
+
+---
+
+### Step 2: Gather Requirements
 
 **If user provides full description:**
 ```
-/design-course "AI literacy for non-technical employees, 50 minutes total, mandatory training, must result in practical application within 1 week"
+/design-course my-ai-course "AI literacy for non-technical employees, 50 minutes total, mandatory training, must result in practical application within 1 week"
 ```
-Parse it and proceed to Step 2.
+Parse it and proceed to Step 3.
 
 **If user provides minimal info:**
 ```
-/design-course
+/design-course my-ai-course
 ```
 
 Ask these questions:
@@ -67,7 +95,7 @@ Ask these questions:
 
 ---
 
-### Step 2: Research Phase
+### Step 3: Research Phase
 
 Use **WebSearch** extensively to gather information. Aim for 10-15 high-quality sources.
 
@@ -135,7 +163,7 @@ Look for:
 
 ---
 
-### Step 3: Synthesize & Design
+### Step 4: Synthesize & Design
 
 Based on research, create a draft course syllabus:
 
@@ -205,7 +233,7 @@ For each module, note:
 
 ---
 
-### Step 4: Validate with module-progression-analyzer
+### Step 5: Validate with module-progression-analyzer
 
 Use the `module-progression-analyzer` skill to check:
 - Do modules flow logically?
@@ -226,7 +254,7 @@ Run the skill again until flow quality is "Good" or "Excellent."
 
 ---
 
-### Step 5: Present Proposal
+### Step 6: Present Proposal
 
 Create a brief, scannable proposal document for user review:
 
@@ -292,7 +320,7 @@ Learners will be able to:
 - Module 2 → 3: [How they connect]
 - Module 3 → 4: [How they connect]
 
-**Detailed syllabus saved to:** `docs/course-syllabus.md`
+**Detailed syllabus saved to:** `courses/{COURSE_NAME}/docs/course-syllabus.md`
 
 ---
 
@@ -359,7 +387,7 @@ Learners will be able to:
 - **[Topic 2]:** [One sentence finding] → [How it influenced design]
 - **[Topic 3]:** [One sentence finding] → [How it influenced design]
 
-**Full research findings saved to:** `docs/research-findings.md`
+**Full research findings saved to:** `courses/{COURSE_NAME}/docs/research-findings.md`
 
 ---
 
@@ -384,7 +412,7 @@ Learners will be able to:
 | 4 | QA & Polish | Full review → Fixes → Final validation | [X] hrs |
 | **Total** | | | **[X] hrs** |
 
-**Next Command:** `/build-module 1` to start development
+**Next Command:** `/build-module {COURSE_NAME} 1` to start development
 
 ---
 
@@ -410,12 +438,12 @@ Learners will be able to:
 4. Any modules to add/remove/reorder?
 
 **If Approved, I'll Save:**
-- `docs/course-proposal.md` - This full proposal document
-- `docs/course-syllabus.md` - Streamlined implementation reference
-- `docs/module-outlines/module_[N]_outline.md` - Detailed per-module specs
-- `docs/research-findings.md` - Full research sources and findings
+- `courses/{COURSE_NAME}/docs/course-proposal.md` - This full proposal document
+- `courses/{COURSE_NAME}/docs/course-syllabus.md` - Streamlined implementation reference
+- `courses/{COURSE_NAME}/docs/module-outlines/module_[N]_outline.md` - Detailed per-module specs
+- `courses/{COURSE_NAME}/docs/research-findings.md` - Full research sources and findings
 
-**Then Run:** `/build-module 1` to start content development
+**Then Run:** `/build-module {COURSE_NAME} 1` to start content development
 
 ---
 
@@ -426,7 +454,7 @@ Present this to the user and wait for feedback.
 
 ---
 
-### Step 6: Iterate Based on Feedback
+### Step 7: Iterate Based on Feedback
 
 User might say:
 - "Module 2 seems too long, can you split it?"
@@ -445,18 +473,18 @@ Iterate until user approves.
 
 ---
 
-### Step 7: Save Final Documents
+### Step 8: Save Final Documents
 
-Once approved, create these files:
+Once approved, create these files using the course name from Step 1:
 
-#### **1. `docs/course-proposal.md`**
-Save the complete proposal document from Step 5 (with all sections: Executive Summary, Learning Objectives, Target Audience, Module Overview, Design Rationale, Time Allocation, Module Progression Validation, Research Foundation, Alternative Approaches, Development Roadmap, Success Metrics, Next Steps).
+#### **1. `courses/{COURSE_NAME}/docs/course-proposal.md`**
+Save the complete proposal document from Step 6 (with all sections: Executive Summary, Learning Objectives, Target Audience, Module Overview, Design Rationale, Time Allocation, Module Progression Validation, Research Foundation, Alternative Approaches, Development Roadmap, Success Metrics, Next Steps).
 
 This is the comprehensive design presentation document for stakeholder buy-in.
 
 ---
 
-#### **2. `docs/course-syllabus.md`**
+#### **2. `courses/{COURSE_NAME}/docs/course-syllabus.md`**
 ```markdown
 # [Course Title] - Course Syllabus
 
@@ -492,14 +520,14 @@ This is the comprehensive design presentation document for stakeholder buy-in.
 
 ---
 
-**See also:** `docs/course-proposal.md` for full design rationale
+**See also:** `courses/{COURSE_NAME}/docs/course-proposal.md` for full design rationale
 ```
 
 This is the streamlined reference document for implementation.
 
 ---
 
-#### **3. `docs/module-outlines/module_[N]_outline.md`** (one per module)
+#### **3. `courses/{COURSE_NAME}/docs/module-outlines/module_[N]_outline.md`** (one per module)
 ```markdown
 # Module [N]: [Title]
 
@@ -551,7 +579,7 @@ This module succeeds when learners can:
 ## Development Notes
 
 **Writing guidance:**
-- Follow docs/style-guide.md (Professional-Direct)
+- Follow courses/{COURSE_NAME}/docs/style-guide.md (Professional-Direct)
 - Target audience: [Reminder of who they are]
 - Time target: [X] minutes = ~[Y] words at 200-250 wpm
 
@@ -563,7 +591,7 @@ This module succeeds when learners can:
 - [Where personalization could help]
 ```
 
-#### **4. `docs/research-findings.md`**
+#### **4. `courses/{COURSE_NAME}/docs/research-findings.md`**
 ```markdown
 # Research Findings - [Course Title]
 
@@ -606,7 +634,7 @@ This module succeeds when learners can:
 [Any region-specific findings that influenced design]
 ```
 
-#### **5. `.claude/temp/development_plan.md`**
+#### **5. `.claude/temp/{COURSE_NAME}_development_plan.md`**
 ```markdown
 # Development Plan - [Course Title]
 
@@ -673,17 +701,23 @@ This module succeeds when learners can:
 
 **Scenario 1: Full description upfront**
 ```
-/design-course "AI literacy for non-technical employees, 50 minutes total, mandatory training, should enable practical use within 1 week"
+/design-course ai-literacy "AI literacy for non-technical employees, 50 minutes total, mandatory training, should enable practical use within 1 week"
 ```
-Agent parses requirements and proceeds directly to research.
+Agent extracts course name "ai-literacy", parses requirements, and proceeds directly to research.
 
-**Scenario 2: Minimal info, interactive mode**
+**Scenario 2: Course name only, interactive mode**
+```
+/design-course my-ai-course
+```
+Agent uses "my-ai-course" as the course name, asks clarifying questions, then researches and designs.
+
+**Scenario 3: No course name provided**
 ```
 /design-course
 ```
-Agent asks clarifying questions, then researches and designs.
+Agent asks: "What would you like to name this course?", then proceeds with requirements gathering.
 
-**Scenario 3: After iteration**
+**Scenario 4: After iteration**
 ```
 User: "Module 3 seems too theoretical, make it more applied"
 Agent: Revises Module 3 structure, validates with module-progression-analyzer, presents updated version.
@@ -701,4 +735,4 @@ This command succeeds when:
 - ✅ User approves the proposed syllabus
 - ✅ All supporting documents saved correctly
 
-The course is now ready for content development via `/build-module`.
+The course is now ready for content development via `/build-module {COURSE_NAME} {MODULE_NUMBER}`.

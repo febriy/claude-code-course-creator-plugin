@@ -51,7 +51,7 @@ Use the `style-extractor` skill to analyze examples and generate a style guide.
 
 Output saved to:
 ```
-docs/style-guide.md
+courses/{COURSE_NAME}/docs/style-guide.md
 ```
 
 This guide includes:
@@ -207,7 +207,7 @@ The skill learns from ALL examples, so adding more refines the guide.
 /build-module 3
 
 # In the agent prompt, reference:
-"Follow the style guide in docs/style-guide.md"
+"Follow the style guide in courses/{COURSE_NAME}/docs/style-guide.md"
 ```
 
 ### **With `/edit-detailed` or `/edit-quick`:**
@@ -240,7 +240,7 @@ Skill style-extractor (Mode 2) on content/3_2_section.md
 │       ├── too_casual.txt
 │       └── ...
 └── output/
-    └── (skill generates docs/style-guide.md)
+    └── (skill generates courses/{COURSE_NAME}/docs/style-guide.md)
 ```
 
 ---
@@ -332,7 +332,7 @@ Skill style-extractor (Mode 2) on content/4_1_intro.md
 
 1. **Add your example files** to `examples/good/` (and optionally `examples/bad/`)
 2. **Run the skill:** `Skill style-extractor`
-3. **Review the generated guide** in `docs/style-guide.md`
+3. **Review the generated guide** in `courses/{COURSE_NAME}/docs/style-guide.md`
 4. **Use the guide** when creating or editing content
 5. **Update as needed** by adding examples and regenerating
 

@@ -4,12 +4,19 @@ description: Review course content quality using editor-agent (structure, flow, 
 
 Use the **editor-agent** subagent to perform a comprehensive review of the specified content.
 
+## Prerequisites
+
+Extract the course name from the user's input:
+- Example: `/review my-ai-course module 2` → Course is "my-ai-course", review module 2
+- Example: `/review ai-literacy all` → Course is "ai-literacy", review all files
+- If course name missing, ask: "Which course would you like to review?"
+
 ## Scope Handling
 
 First, determine the scope:
-- **Single file**: If a file path is provided (e.g., `content/2_3_what_is_ai_section_3.md`)
-- **Module**: If "module X" is specified (e.g., "module 2" means all files matching `content/2_*.md`)
-- **All**: If "all" is specified (means all files in `content/` directory)
+- **Single file**: If a file path is provided (e.g., `courses/{COURSE_NAME}/content/2_3_what_is_ai_section_3.md`)
+- **Module**: If "module X" is specified (e.g., "module 2" means all files matching `courses/{COURSE_NAME}/content/2_*.md`)
+- **All**: If "all" is specified (means all files in `courses/{COURSE_NAME}/content/` directory)
 
 ## Task for the Subagent
 
@@ -135,6 +142,6 @@ Fix these first for maximum impact:
 - Be constructive - highlight strengths as well as issues
 
 **Usage examples:**
-- `/review content/2_3_what_is_ai_section_3.md` → Review single file
-- `/review module 2` → Review all Module 2 files
-- `/review all` → Review entire course
+- `/review my-ai-course courses/my-ai-course/content/2_3_what_is_ai_section_3.md` → Review single file
+- `/review my-ai-course module 2` → Review all Module 2 files
+- `/review my-ai-course all` → Review entire course

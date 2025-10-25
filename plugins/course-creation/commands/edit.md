@@ -24,10 +24,10 @@ Instead of running all skills, focus on ONE specific problem you've identified.
 **This is the FASTEST editing mode** - use when you've already reviewed content and know exactly what needs fixing.
 
 **Usage examples:**
-- `/edit-quick tone content/3_1_ai_in_workplace_1.md` → Fix only tone issues
-- `/edit-quick citations module 2` → Format all citations in Module 2
-- `/edit-quick flow content/2_3_what_is_ai_section_3.md` → Fix paragraph flow only
-- `/edit-quick spelling all` → Convert entire course to Singapore English
+- `/edit-quick my-ai-course tone courses/my-ai-course/content/3_1_ai_in_workplace_1.md` → Fix only tone issues
+- `/edit-quick my-ai-course citations module 2` → Format all citations in Module 2
+- `/edit-quick my-ai-course flow courses/my-ai-course/content/2_3_what_is_ai_section_3.md` → Fix paragraph flow only
+- `/edit-quick my-ai-course spelling all` → Convert entire course to Singapore English
 
 **WHEN TO USE:**
 - After `/review` identifies specific issue types

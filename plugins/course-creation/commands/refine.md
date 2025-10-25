@@ -6,9 +6,13 @@ Launch a **general-purpose agent** to modify the course syllabus based on your f
 
 ## Prerequisites
 
+Extract the course name from the user's input:
+- Example: `/refine-syllabus my-ai-course "Split module 2"` → Course is "my-ai-course"
+- If course name missing, ask: "Which course syllabus would you like to refine?"
+
 You should have:
-- Existing course syllabus in `docs/course-syllabus.md`
-- Module outlines in `docs/module-outlines/`
+- Existing course syllabus in `courses/{COURSE_NAME}/docs/course-syllabus.md`
+- Module outlines in `courses/{COURSE_NAME}/docs/module-outlines/`
 
 ## How It Works
 
@@ -27,9 +31,9 @@ When the user runs `/refine-syllabus [feedback]`, you (the general-purpose agent
 ### Step 1: Read Current Syllabus
 
 Read these files:
-- `docs/course-syllabus.md` (main syllabus)
-- All files in `docs/module-outlines/` (module details)
-- `docs/course-structure.md` (if exists - overall structure notes)
+- `courses/{COURSE_NAME}/docs/course-syllabus.md` (main syllabus)
+- All files in `courses/{COURSE_NAME}/docs/module-outlines/` (module details)
+- `courses/{COURSE_NAME}/docs/course-structure.md` (if exists - overall structure notes)
 
 If syllabus doesn't exist, inform user:
 ```
@@ -318,7 +322,7 @@ Wait for user response.
 
 If user approves, update all affected files:
 
-#### **A. Update `docs/course-syllabus.md`**
+#### **A. Update `courses/{COURSE_NAME}/docs/course-syllabus.md`**
 
 Rewrite the syllabus file with:
 - New module structure
@@ -336,7 +340,7 @@ Rewrite the syllabus file with:
 For each affected module:
 
 **If module was modified:**
-- Update `docs/module-outlines/module_[N]_outline.md`
+- Update `courses/{COURSE_NAME}/docs/module-outlines/module_[N]_outline.md`
 - Change title, duration, objectives, sections as needed
 - Add note at top:
   ```markdown
@@ -355,7 +359,7 @@ For each affected module:
 - Update module numbering for subsequent modules
 
 **If module was added:**
-- Create new `docs/module-outlines/module_[N]_outline.md`
+- Create new `courses/{COURSE_NAME}/docs/module-outlines/module_[N]_outline.md`
 - Populate with structure based on user requirements
 - Mark sections needing development:
   ```markdown
@@ -376,7 +380,7 @@ Update `.claude/temp/development_plan.md` to reflect:
 
 #### **D. Create Change Log**
 
-Create or append to `docs/syllabus-changelog.md`:
+Create or append to `courses/{COURSE_NAME}/docs/syllabus-changelog.md`:
 ```markdown
 ## [Date] - Version 1.1
 
@@ -408,9 +412,9 @@ Create or append to `docs/syllabus-changelog.md`:
 ✅ SYLLABUS REFINEMENT COMPLETE
 
 **Files Updated:**
-- ✅ `docs/course-syllabus.md` (version 1.1)
-- ✅ `docs/module-outlines/module_[N]_outline.md` ([count] files)
-- ✅ `docs/syllabus-changelog.md` (change logged)
+- ✅ `courses/{COURSE_NAME}/docs/course-syllabus.md` (version 1.1)
+- ✅ `courses/{COURSE_NAME}/docs/module-outlines/module_[N]_outline.md` ([count] files)
+- ✅ `courses/{COURSE_NAME}/docs/syllabus-changelog.md` (change logged)
 - ✅ `.claude/temp/development_plan.md` (development plan updated)
 
 ---
@@ -503,10 +507,10 @@ Response:
 ⚠️ CONTENT IMPACT ALERT
 
 Module 2 content already exists in:
-- content/2_1_intro.md
-- content/2_2_ml_concepts.md
-- content/2_3_speech_example.md
-- content/2_4_bias.md
+- courses/{COURSE_NAME}/content/2_1_intro.md
+- courses/{COURSE_NAME}/content/2_2_ml_concepts.md
+- courses/{COURSE_NAME}/content/2_3_speech_example.md
+- courses/{COURSE_NAME}/content/2_4_bias.md
 
 **Proposed Split:**
 - Module 2A: Sections 2.1, 2.2 (10 min)
@@ -514,10 +518,10 @@ Module 2 content already exists in:
 
 **Required Actions:**
 1. Rename files:
-   - content/2_1_intro.md → content/2A_1_intro.md
-   - content/2_2_ml_concepts.md → content/2A_2_ml_concepts.md
-   - content/2_3_speech_example.md → content/2B_1_speech_example.md
-   - content/2_4_bias.md → content/2B_2_bias.md
+   - courses/{COURSE_NAME}/content/2_1_intro.md → content/2A_1_intro.md
+   - courses/{COURSE_NAME}/content/2_2_ml_concepts.md → content/2A_2_ml_concepts.md
+   - courses/{COURSE_NAME}/content/2_3_speech_example.md → content/2B_1_speech_example.md
+   - courses/{COURSE_NAME}/content/2_4_bias.md → content/2B_2_bias.md
 
 2. Renumber subsequent modules:
    - Module 3 → Module 4
