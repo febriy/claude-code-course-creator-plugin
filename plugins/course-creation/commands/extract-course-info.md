@@ -1,5 +1,5 @@
 ---
-description: Reverse-engineer course documentation from existing content (course analyzer)
+description: Extract structure, tone, and documentation from existing course content
 ---
 
 Launch a **general-purpose agent** to analyze your existing course content and generate formal documentation (syllabus, module outlines, research brief).

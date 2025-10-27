@@ -1,5 +1,5 @@
 ---
-description: Update course syllabus based on your feedback, with validation (syllabus refiner)
+description: Restructure course organization (split/merge/reorder modules)
 ---
 
 Launch a **general-purpose agent** to modify the course syllabus based on your feedback, validate changes, and update all affected files.

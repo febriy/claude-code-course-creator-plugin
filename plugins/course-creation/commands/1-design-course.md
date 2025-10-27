@@ -1,5 +1,5 @@
 ---
-description: Research and design a complete course curriculum from initial concept (course architect)
+description: Research and design a new course curriculum from scratch
 ---
 
 Launch a **general-purpose agent** to research, design, and propose a complete course curriculum from your initial concept.

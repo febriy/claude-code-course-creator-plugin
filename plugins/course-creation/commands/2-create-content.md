@@ -1,5 +1,5 @@
 ---
-description: Draft complete module content from outline, offering structural options before writing (module builder)
+description: Write complete module content from your course design
 ---
 
 Launch a **general-purpose agent** to research, design structure options, and draft all content for a specific module.

@@ -1,0 +1,356 @@
+
+Wes Kao's Newsletter
+Wes Kao's Newsletter
+
+
+
+Discover more from Wes Kao's Newsletter
+A bi-weekly newsletter on managing up, executive communication, and standing out as a high-performer. Written by an a16z-backed founder.
+Over 77,000 subscribers
+Enter your email...
+By subscribing, I agree to Substack's Terms of Use, and acknowledge its Information Collection Notice and Privacy Policy.
+Already have an account? Sign in
+Start here
+Rigorous thinking: No lazy thinking
+The best managers teach their team how to think strategically. Here's how to a build culture of good decision-making and thoughtful debate.
+Wes Kao
+Nov 01, 2023
+
+👋 Hey, it’s Wes. Welcome to my weekly newsletter where I share frameworks for becoming a sharper marketer, founder, and operator.
+
+⛑️ Work with me for 1:1 executive coaching or check out my new course: Executive Communication & Influence for Senior ICs and Managers
+
+If you’re not a subscriber yet, here’s what you missed this month:
+
+15 principles for managing up
+
+Start right before you get eaten by the bear
+
+The problem with glorifying failure
+
+Subscribe to get access to these posts, and all future posts.
+
+Type your email...
+Subscribe
+Rigorous thinking is where flimsy ideas go to die. As a leader, having a team of rigorous thinkers is an organizational force multiplier that allows you to produce higher quality work, faster, even when resources are limited. Today, we’ll cover:
+
+Part I: What is rigorous thinking and why it matters
+
+Part II: How to create a culture of rigorous thinking
+
+Part III: Questions to promote rigorous thinking
+
+I originally published a version of this essay on November 2018, and have expanded it. If you find this article helpful, please share it with your friends and colleagues. Enjoy.
+
+Read time: 13 minutes
+
+If you're a leader, you got to where you are because you’re killer at both strategy and execution. You simply can't get very far without being good at both. Now that you're in charge of people, though, your ability to increase impact depends on how well you manage other people. You need your team to become strategic A-players.
+
+Unfortunately, high-performing managers (like you) can accidentally traumatize their teams. You want your team members to think for themselves and stop only doing what you say. But every time they have a question, you jump to answer it. Or worse, you give them a wrist slap for bringing you a new idea.
+
+I get it. You barely have time to do your own job, and you definitely don't have time to clean up your team’s messes. But each time you unintentionally punish your team for stepping outside the box, you discourage them from trying new things.
+
+So you have a dilemma: You want your team to think like an owner and bring you fresh ideas—AND you want those ideas to be defensible. How do you do this?
+
+Enter: rigorous thinking.
+
+Welcome or welcome back to my newsletter. Thinking rigorously requires practice. If you want to learn how to apply rigorous thinking to better influence and inspire others, check out my intensive 2-day live course: Executive Communication & Influence for Senior ICs and Managers. You’ll learn alongside mid-career operators from organizations like Netflix, Uber, Zillow, Grammarly, Meta, Square, Amazon, Spotify, etc. → Save your spot
+
+Part I: What is rigorous thinking?
+Rigorous thinking is asking critical questions about tactics, and having a systematic way of making decisions.
+
+Rigorous thinking isn’t a single mental model. It’s an approach to problem solving that allows you to deconstruct ideas, gain clarity, and make decisions that are far more likely to be right.
+
+Counterintuitively, rigorous thinking saves you time. Instead of jumping to execute the first idea you think of, you run through basic considerations to stress test your own logic. This, in turn, means less time wasted on fixing easily avoidable mistakes, and more time spent on ideas worth pursuing.
+
+In this way, rigorous thinking acts as a force multiplier and fosters a spirit of entrepreneurialism and ownership among your team. It’s lonely and stressful to be the only one thinking about what to do, looking around the corner to anticipate what’s next. With a team of rigorous thinkers, you won’t have to—you’ll have a bench of eager, up-and-coming leaders who share that load with you.
+
+Let's say you manage 4-5 direct reports. In a culture where rigorous thinking is expected, the idea is this:
+
+Any idea goes, but each team member should be prepared to advocate for their idea and defend it. You should be prepared to walk through the upside, downside, data points rooted in reality, and how it works given your assets and constraints. Anyone can ask questions and probe, and these questions are received with gratitude and openness.
+
+The opposite of rigorous thinking is lazy thinking: Lazy thinking is making assumptions you don't even know are assumptions.
+
+Lazy thinking is assuming your idea simply works, or that someone else will be in charge of “figuring out the details.” Lazy thinkers consider anything they don’t want to do (usually the hard part of actually solving a problem) to be “the details.”
+
+Lazy thinking is having a black box of logic where “suddenly it works and we have thousands of customers.”
+
+
+This is one of my favorite memes. It’s from the South Park “Gnomes” episode (Season 2, Episode 17) where the characters try to start a business.
+If you find this valuable, subscribe for free to receive new posts in your inbox:
+
+
+Rigorous thinking vs lazy thinking
+Let’s compare these two scenarios:
+
+🚫 Lazy thinking: "Hey boss, can we do [insert random tactic]?"
+
+Result: You have to think through everything, which leads to decision fatigue. You’re running around correcting your team’s missteps. The mistakes range from minor to major oversights in strategic thinking.
+
+Shiny object syndrome rules. Half-baked ideas come across your desk, so you have to think of polite ways to say why this isn’t a good idea without discouraging your team.
+
+Your team doesn't understand why you always say no to their ideas. You look like the bad guy.
+
+✅ Rigorous thinking: "Hey boss, I recommend we do ___. It's likely to work and is worth the time and budget because ___. The downside and potential risks are ___. But we can minimize the risk with a small experiment by doing ___.”
+
+In this world, you rarely say no to an idea, because it's not about saying yes or no. It's about vetting an idea. You ask strategic questions, so your employee ends up realizing themselves that the idea won't work in its current iteration.
+
+You work collaboratively to pressure test assumptions. They excitedly go back to the drawing board and come back to you with a stronger iteration and next steps. They hone their judgment and become more strategic over time, requiring less support from you.
+
+You have less decision fatigue and get better results. Direct reports feel empowered and take ownership.
+
+
+Part II: How to create a culture of rigorous thinking
+1. Rigorous thinking starts at the top.
+If you set a high bar and celebrate thoughtful decision-making, you send a signal that rigor matters. You don’t let your team get away with lazy assumptions, subpar work, or latch onto surface-level conclusions that don’t capture an accurate picture of the underlying truth.
+
+At Maven, one of our values was rigorous thinking. A company’s culture often reflects the founders’ personality and values, and this was the case.
+
+Here’s an excerpt from our values:
+
+We are relentlessly focused on solving problems and making the best out of less. We take a little and turn it into a lot, without fuss and with great execution. Often, this means seeing bugs as features or being creative in coming up with elegant solutions for big, hairy problems.
+
+Decision-making and writing are core skills of everyone on the team. We examine multiple points of view and make decisions in a thorough manner. We’re not afraid to be wrong, and we don’t delusionally ignore the truth for the sake of speed.
+
+We value qualitative data as much as quantitative, because while numbers never lie, they also never tell the full story. We then write down our thoughts because it is both the most efficient and effective form of communication.
+
+
+Screenshot of Maven’s company values
+We regularly had outside partners or contractors who had a peek into our culture comment on how rigorous Maven team members were. And the word rigorous itself was used regularly among our team as a compliment for thoughtful, conscientious work rooted in strong insights and logic. It was a culture where evidence-based thinking was rewarded.
+
+One of my favorite quotes is from Picasso, who said, “There are painters who transform the sun to a yellow spot, but there are others who with the help of their art and their intelligence, transform a yellow spot into sun.” Rigorous thinking allows you to turn yellow spots into the sun.
+
+2. No ideas are precious or off-limits
+You may need to model for your team what healthy debate looks like. Mainly, this means leading by example because culture is basically people looking around to see what things are like around here. Your team members pick up on unspoken rules.
+
+To establish a norm of rigorous thinking, you’ll want to encourage your team to speak up if they disagree, and to do so respectfully and openly. And when questions are asked of them, to react positively and see the questions as a gift. This part is important: A team member’s initial reaction may be to feel a little defensive, and that’s natural, but that’s not the reaction to act on. The way to react is to appreciate when a colleague cares enough to speak up.
+
+
+The Maven team has an internal culture of debate. Anyone—of all levels and functions—could ask questions, probe, and challenge each others’ thinking, including folks from other teams. At the end of each bi-weekly all-hands meeting, we had an open Q&A. An engineer might ask a question to a program manager. A salesperson might ask a question to the Head of Growth. A customer support rep might ask a question to the CEO.
+
+For write-ups about the company strategy, it was the same: everyone in the company was encouraged to add comments, ask questions, and challenge assumptions directly in a doc where everyone else could see comments. This strengthened our strategies because folks closest to the work would add insights that leaders missed, and folks further from the work would offer an outside perspective that was equally valuable. It increased buy-in and morale across the organization that every team member was involved in understanding our company goals and strategy. This might look different at larger companies, but I believe the underlying concept is sound and can be modified for functional teams (i.e. marketing team, product team, etc).
+
+The fact that questions flowed in both directions (not only upward to the leadership team), helped normalize that anyone can speak up, and more importantly, no one’s ideas were precious or off-limits.
+
+3. Create psychological safety
+If you want to encourage sparring and healthy debates, you need a foundation of psychological safety. Your team has to trust that you care, and trust that you're asking hard questions because it's better for them, the team, and the idea itself. No one is trying to make anyone look bad or feel stupid.
+
+With this understanding, your team is free to rigorously debate with each other to come up with the best possible outcome.
+
+Type your email...
+Subscribe
+This is not an interrogation. The way you ask matters. Don’t sit back, kick your feet up, and ask to be impressed. This attitude wouldn’t bring out the best in you, and it won’t bring out the best in your team.
+
+Ask hard questions in a way that's supportive and driven by curiosity, not contempt. When you take this approach, you empower your team members to figure out and articulate a solution. You show you're there with them, and you believe in them.
+
+It’s two people walking through an idea and scenario planning what it could look like, with the goal of finding the best solution. It’s win-win.
+
+
+4. A yes or no without context is a missed opportunity for learning
+If you only say yes or no to ideas, your team will keep coming back to you with a similar level of ideas. They won’t know why a strategic proposal worked or didn’t. If you want something to change, it’s your responsibility to invest the time to share your thought process, give feedback, and coach them on how to think differently.
+
+The end result of whether you move forward with an idea isn’t as important as the thought process behind it. The world champion poker player Annie Duke coined the decision-making principle of resulting, which describes this well:
+
+Resulting is the tendency to judge a decision based on its outcome rather than its quality. It's a natural human tendency to think that if a decision leads to a good outcome, it must have been a good decision. Likewise, if it leads to a bad outcome, it must have been a bad decision.
+
+
+5. Be a sparring partner
+It’s hard, if not near impossible, to learn how to think strategically by reading a book. Understanding a concept in theory is not the same as understanding it in practice. This is why managers must make the time to engage in conversation with their direct reports. Not just conversation about status updates and project management—but deeper conversations about upcoming decisions, challenges your team is facing, and detailed feedback on work output. This is how you unlock the power of hands on, on-the-job learning.
+
+I've been surprised at how even junior team members have stepped up when given a chance to think rigorously. They often give the answer I would have said. And if they miss the mark, having them actively engaged in thinking about what to do makes my feedback feel more salient. If I never asked, I would have assumed I was the bottleneck who had to have all the answers. Over time, I've gotten fewer simple questions because my team anticipates I'll bounce it back, so they go straight to making a suggestion and sharing their point of view.
+
+
+As a manager, you likely have more experience or context than your team members do. Something might feel obvious to you, but isn't to them, so try to stay curious and get more information before assuming incompetence. Many folks have endured years of finger-wagging and scar tissue from previous managers. To counter this, you have to almost over-encourage your team to share their point of view.
+
+Remember: You hired intelligent people, and your best high performers already want to think rigorously. Be their thought partner. If given the chance, they will be excited to sharpen their thinking with your guidance because it's a skill that will serve them now and forever in their careers.
+
+6. Let others speak
+Let's be honest: We managers love sharing our brilliant ideas with a captive audience. It takes self-restraint and hyper-vigilance on our part to stop and let our direct reports talk. Great managers are eager and want to coach team members, so wanting to talk comes from a place of good intentions. But often when I finish talking, I'm surprised when my direct report summarizes 10-20% of what I shared. This reminds me of two things:
+
+People can only remember so much in one sitting.
+
+They will remember more if they’re actively speaking, not only listening.
+
+Intellectually, most managers know this but forget when they’re amped up in the moment. A solution that’s worked for me is taking the decision-making out of the equation in real time, and instead, relying on an easy-to-remember question that becomes muscle memory: “What do you think?”
+
+
+
+Type your email...
+Subscribe
+7. Prioritize and unpack ideas with more specificity
+Rigorous thinking is realizing that 90% of ideas are probably not worth doing, and the ones that are worth doing, won’t just magically work. It’s realizing that many ideas are decent, but decent doesn’t meet the bar for moving forward when you have limited resources (and resources are always limited, even at large organizations).
+
+Even when you don’t move forward with an idea, though, there might be a nub of an insight that can evolve and take on a different form. When you share your rationale and logic, you allow others (and yourself) to push back on specific parts. Instead of throwing out an entire idea, you can discuss with more granularity.
+
+One thing to note: rigorous thinking isn’t the opposite of intuition, even though it might seem so at first glance. I’m a proponent of noticing what your gut is telling you, and listening to your instinct. I use both rigorous thinking and intuition in lockstep, one feeding the other, and helping me develop conviction about what to do.
+
+The point isn't to have all the answers. The point is to better understand your own ideas so, you can expend energy on ones that have a higher likelihood of success.
+
+
+8. Rigorous thinking can be lightweight
+This was a thoughtful question from reader Serena Mariani, Head of Consumer Marketing EU (Books) at Amazon:
+
+I wonder about the reverse topic too—how do you balance thinking rigorously with completely killing the motivation for people to come up with daring ideas. As someone who spent years in big corporates and 4+ at Amazon where every idea must take the form of a thorough PRFAQ to be even looked at, I think I have seen both sides of this moon. Interested in what you think.
+
+Rigorous thinking might be conflated with intense processes, long write-ups, and filling out documentation, but I see the two as different. Personally, I hate overkill processes that snuff out creativity and make the lift so high to share an idea that you want to skip sharing it altogether. That's why I love how you can do rigorous thinking while staying nimble and doing the least amount of process possible.
+
+You might want to write up a strategy doc, but that’s because it helps you articulate your idea. It’s not a requirement.
+
+Rigorous thinking can be as simple as spending 5 minutes running through a few basic questions.
+
+
+
+Part III: Questions to promote rigorous thinking
+Vague ideas are hard to discuss and debate. That’s why fleshing out the mechanics and logic behind your idea can help you gain conviction. With that in mind, here’s a non-exhaustive list of questions to get started:
+
+What's the hard part?
+
+What does success look like?
+
+Is the juice worth the squeeze?
+
+Who is this for? What is this for?
+
+What are potential reasons not to do this, i.e. counterpoints?
+
+What is our unfair advantage for doing this?
+
+What are areas of risk and how might we mitigate?
+
+Why is this likely to work and be a good investment?
+
+What evidence, data, and examples am I pulling from?
+
+What assets, levers, and constraints are we working with?
+
+Who do we need buy-in from in order to move forward?
+
+What’s the upside, downside, and trade-offs?
+
+Where might I be making an assumption or logical leap that doesn’t make sense?
+
+How can we test this in the lowest-overhead way possible?
+
+How does this stack rank against other ideas for driving the business?
+
+If we decided to move forward today, what would you need to bring this to life?
+
+Can we do this ourselves, or do we need to tap into other teams?
+
+Why would your target audience be excited to do the thing you want them to do?
+
+Not every question here will be applicable to you, but at least a few should jump out and spark your thinking. And you may want to add your own go-to questions unique to your situation and function.
+
+Keep in mind: Asking these questions is only a start. Much of the real learning for your direct reports will happen in conversation with you—when you debate and discuss ideas, with you as their sparring partner.
+
+If you report to a busy executive and don’t have anyone available to bounce ideas with, you can still use these questions to deepen your own thinking. In my experience, it can be surprisingly hard to tell how good our own ideas are. Rigorous thinking helps you get a truer sense of this. You can see whether your argument holds water, if you're too detailed in the wrong places but not detailed enough in the right places, and if what you’re asserting makes sense on the surface, but might not hold upon further scrutiny.
+
+
+Managers, try this tomorrow
+The next time a team member approaches you with a question or problem, throw it back at them. Give them a chance to practice thinking rigorously.
+
+Instead of answering right away, ask this:
+
+“Great question. What do you think?”
+
+“This is a great start. How do you see this working?”
+
+Using the Socratic method takes longer than simply giving the answer. You might wonder if it's worth it. But if you stick with it, in the long run, your employees will get sharper and more self-sufficient.
+
+Here’s the trade-off: You either spend the time upfront to train your team, or you take a few hours every day to correct their work forever. In most cases, training your team to think rigorously eventually takes a load off your plate, so everyone can produce more and better quality work, and have more fun doing it.
+
+Summary:
+
+Rigorous thinking upfront will help you save time, make well-informed decisions, take better risks, and learn faster.
+
+Make this your go-to response: “Great question. What do you think?”
+
+Create psychological safety. Be a sparring partner for your team.
+
+A yes or no without context is a missed opportunity for learning.
+
+No idea is precious or off-limits from thoughtful feedback and inquiry.
+
+Rigorous thinking and intuition go hand in hand. They may seem at odds, but are mutually reinforcing.
+
+Practice self-restraint and let your direct reports talk.
+
+Rigorous thinking can be lightweight.
+
+Rigorous thinking is win-win because it prevents decision fatigue for managers and empowers team members to embrace an entrepreneurial mindset.
+
+If you found this valuable, consider subscribing if you haven’t already, or take a moment to refer a friend. When you refer friends, you’ll unlock referral rewards of my personal book lists and not-yet-published spiky points of view.
+
+Refer a friend
+
+Thanks for being here,
+Wes Kao
+
+PS If you’re ready to level up, here are more ways I can help:
+
+Follow me on Twitter or LinkedIn for insights during the week (free).
+
+Check my availability to do a keynote for your team.
+
+Work with me for 1:1 executive coaching. I find it extremely rewarding to give personalized guidance to ambitious operators. My current clients include leaders at startups funded by Sequoia, Accel, Bessemer, SV Angel, Kleiner Perkins, etc.
+
+Enroll in my new course: Executive Communication & Influence for Senior ICs and Managers
+
+Subscribe to Wes Kao's Newsletter
+Launched 2 years ago
+A bi-weekly newsletter on managing up, executive communication, and standing out as a high-performer. Written by an a16z-backed founder.
+Type your email...
+Subscribe
+By subscribing, I agree to Substack's Terms of Use, and acknowledge its Information Collection Notice and Privacy Policy.
+315 Likes
+∙
+39 Restacks
+Discussion about this post
+Write a comment...
+Joseph Waruiru
+9 Nov 2023
+
+I used to be a bit frustrated when my manager asked me to write down my ideas, but now I get it. Writing clearly, is thinking clearly. I often have lots of 'good' ideas until they hit the paper. I've learnt that great ideas are worthless if not implemented in the proper context which requires rigorous thinking.
+
+Like (10)
+Reply
+Share
+2 replies by Wes Kao and others
+Neel K
+2 Nov 2023
+
+For a report to develop this skill of rigorous thinking is it just asking those 4/5 questions to vet your idea or more than that . How do you get better at this skill ? Is it just the habit of asking these questions every time ?
+
+Like (5)
+Reply
+Share
+1 reply by Wes Kao
+26 more comments...
+
+15 principles for managing up
+When your boss loves you, you have options. Here's how to help your manager get what they need, so you get what you want.
+Oct 25, 2023 • Wes Kao
+492
+33
+
+How to give a senior leader feedback (without getting fired)
+There’s a right and wrong way to proceed. Here’s how to increase the chances your leader listens and takes action--while reducing the chance they feel…
+Nov 20, 2024 • Wes Kao
+251
+12
+
+Why high performers make assertions: The difference between insights, suggestions, and assertions
+An insight is just a starting point. The rare, courageous thing to do is to develop an assertion, i.e. a hypothesis and point of view that answers "so…
+Apr 30 • Wes Kao
+310
+18
+
+Ready for more?
+
+Type your email...
+Subscribe
+© 2025 Wes Kao
+Privacy ∙ Terms ∙ Collection notice
+Start your Substack
+Get the app
+Substack is the home for great culture

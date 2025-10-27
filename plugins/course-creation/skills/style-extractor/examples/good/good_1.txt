@@ -1,0 +1,27 @@
+These are all supervised machine learning tasks. In all cases, the machine learning algorithm is attempting to imitate the pattern between the two datasets in such a way that it can use one dataset to predict the other. For any of these examples, imagine if you had the power to predict the output dataset given only the input dataset. Such an ability would be profound.
+
+Supervised machine learning
+Supervised learning transforms datasets
+Supervised learning is a method for transforming one dataset into another. For example, if you had a dataset called Monday Stock Prices that recorded the price of every stock on every Monday for the past 10 years, and a second dataset called Tuesday Stock Prices recorded over the same time period, a supervised learning algorithm might try to use one to predict the other.
+
+
+If you successfully trained the supervised machine learning algorithm on 10 years of Mondays and Tuesdays, then you could predict the stock price on any Tuesday in the future given the stock price on the immediately preceding Monday. I encourage you to stop and consider this for a moment.
+
+Supervised machine learning is the bread and butter of applied artificial intelligence (also known as narrow AI). It’s useful for taking what you know as input and quickly transforming it into what you want to know. This allows supervised machine learning algorithms to extend human intelligence and capabilities in a seemingly endless number of ways.
+
+The majority of work using machine learning results in the training of a supervised classifier of some kind. Even unsupervised machine learning (which you’ll learn more about in a moment) is typically done to aid in the development of an accurate supervised machine learning algorithm.
+
+
+For the rest of this book, you’ll be creating algorithms that can take input data that is observable, recordable, and, by extension, knowable and transform it into valuable output data that requires logical analysis. This is the power of supervised machine learning.
+
+Unsupervised machine learning
+Unsupervised learning groups your data
+Unsupervised learning shares a property in common with supervised learning: it transforms one dataset into another. But the dataset that it transforms into is not previously known or understood. Unlike supervised learning, there is no “right answer” that you’re trying to get the model to duplicate. You just tell an unsupervised algorithm to “find patterns in this data and tell me about them.”
+
+For example, clustering a dataset into groups is a type of unsupervised learning. Clustering transforms a sequence of datapoints into a sequence of cluster labels. If it learns 10 clusters, it’s common for these labels to be the numbers 1–10. Each datapoint will be assigned to a number based on which cluster it’s in. Thus, the dataset turns from a bunch of datapoints into a bunch of labels. Why are the labels numbers? The algorithm doesn’t tell you what the clusters are. How could it know? It just says, “Hey scientist! I found some structure. It looks like there are groups in your data. Here they are!”
+
+
+I have good news! This idea of clustering is something you can reliably hold onto in your mind as the definition of unsupervised learning. Even though there are many forms of unsupervised learning, all forms of unsupervised learning can be viewed as a form of clustering. You’ll discover more on this later in the book.
+
+
+Check out this example. Even though the algorithm didn’t tell what the clusters are named, can you figure out how it clustered the words? (Answer: 1 == cute and 2 == delicious.) Later, we’ll unpack how other forms of unsupervised learning are also just a form of clustering and why these clusters are useful for supervised learning.

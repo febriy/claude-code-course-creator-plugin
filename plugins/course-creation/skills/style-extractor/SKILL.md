@@ -18,22 +18,81 @@ You understand writing at multiple levels:
 - **Content Structure**: How information is organized and presented
 - **Audience Adaptation**: How writing adjusts to reader needs
 
+---
+
+## DEFAULT STYLE GUIDE AVAILABLE
+
+**A comprehensive default style guide is available** at:
+`/Users/arvin/.claude/plugins/marketplaces/arvins-course-content-writer-marketplace/plugins/course-creation/skills/style-extractor/default-style-guide.md`
+
+**Default Style:** Professional-Conversational Educational Content
+- Based on analysis of high-quality technical education writing
+- Balances technical accuracy with approachability
+- Suitable for adult professional learners
+- Teaching-first orientation with concrete examples
+
+**When to use default:**
+- Starting a new course without existing style samples
+- Want a proven educational style
+- Need consistency across multiple courses
+- Don't have enough examples to extract custom style
+
+**When to create custom style:**
+- Have 5+ examples of your desired style
+- Need to match existing brand voice
+- Want specific tone/approach different from default
+
+---
+
 ## How This Skill Works
 
-### **Input:**
+### **STEP 0: Check if User Wants Default Style**
+
+**Before analyzing examples, ask the user:**
+
+```
+📘 STYLE GUIDE OPTIONS
+
+I can help you with:
+
+1. **Use Default Style** - Apply the pre-built "Professional-Conversational Educational" style
+   - Fast (no analysis needed)
+   - Proven for adult learning content
+   - Ready to use immediately
+
+2. **Create Custom Style** - Analyze your examples to build a tailored style guide
+   - Requires 5+ good example files
+   - Matches your specific voice
+   - Takes a few minutes to analyze
+
+Which would you prefer?
+```
+
+**If user chooses Option 1 (Default):**
+- Copy `default-style-guide.md` to `courses/{COURSE_NAME}/docs/style-guide.md`
+- Confirm it's ready to use
+- Show brief summary of the style characteristics
+
+**If user chooses Option 2 (Custom):**
+- Proceed with analysis workflow below
+
+---
+
+### **Input (for Custom Style):**
 You receive two types of example texts:
 
 1. **Good Examples** (in `examples/good/`)
    - Text that represents the DESIRED style
    - "Write like THIS"
    - These show what success looks like
+   - **Minimum 3-5 files** (5-10 ideal)
 
 2. **Bad Examples** (in `examples/bad/`) - OPTIONAL
    - Text that represents UNDESIRED style
    - "DON'T write like THIS"
    - These show what to avoid
 
-### **Process:**
+### **Process (for Custom Style):**
 1. Read all example files
 2. Analyze patterns across good examples
 3. Analyze anti-patterns in bad examples (if provided)
