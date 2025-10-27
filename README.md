@@ -1,412 +1,259 @@
-# Course Creation Plugin for Claude Code
+# Claude Code Writer Plugins
 
-A comprehensive Claude Code plugin for creating, editing, and reviewing educational course content. This plugin provides specialized commands, skills, and agents to help you design courses, write modules, and ensure high-quality educational materials.
+A marketplace of Claude Code plugins for creating professional content - educational courses, LinkedIn posts, and more.
 
-## 🎯 What Does This Plugin Do?
+## 🎯 What's Inside?
 
-This plugin transforms Claude Code into a powerful course development assistant. It helps you:
+This marketplace provides specialized plugins that transform Claude Code into a powerful content creation assistant:
 
-- **Design complete courses** from initial concept to full curriculum
-- **Build engaging modules** with proper structure and flow
-- **Review and improve** existing content for quality and clarity
-- **Edit based on your comments** with learning from your feedback patterns
-- **Extract documentation** from existing course content
-- **Restructure courses** by splitting, merging, or reordering modules
-- **Analyze learning progression** across modules and sections
-- **Format citations** consistently throughout your materials
-- **Detect duplicate content** to keep your courses concise
+### 📚 Plugin 1: **course-creation**
+Create, edit, and review educational course content with AI-powered tools.
+
+### 💼 Plugin 2: **linkedin-posts**
+Create engaging LinkedIn posts using atomic essay methodology with guided workflows.
 
 ---
 
-## 📦 Two Main Workflows
-
-### Workflow 1: Create from Scratch (PRIMARY)
-
-The numbered sequence (1→2→3→4) guides you through building a new course:
-
-```
-1. Design Course → 2. Create Content → 3. Review → 4. Edit
-```
-
-### Workflow 2: Work with Existing Content
-
-Extract documentation from existing content, then use the same quality control tools:
-
-```
-Extract Course Info → Review → Edit
-```
-
----
-
-## 🚀 Installation
+## 🚀 Quick Start
 
 ### Prerequisites
 
 - [Claude Code](https://claude.com/claude-code) installed
-- Basic familiarity with the Claude Code plugin system
+- Basic familiarity with Claude Code plugins
 
-### Steps
+### Installation
 
-1. **Clone or download this repository** to your local machine
-
-2. **Copy the plugin folder** to your Claude Code plugins directory:
+1. **Clone this repository:**
    ```bash
-   cp -r plugins/course-creation ~/.claude/plugins/
+   git clone https://github.com/febriy/claude-code-writer-plugins.git
+   cd claude-code-writer-plugins
    ```
 
-3. **Restart Claude Code** or reload your configuration
+2. **The plugins are automatically available** through the marketplace structure
 
-4. **Verify installation** by typing `/course-creation:` in Claude Code - you should see available commands
-
----
-
-## 💡 Commands Reference
-
-### Main Workflow Commands (Numbered 1-4)
-
-#### 1️⃣ `/design-course` - Design Your Course
-**Purpose:** Research and design a complete course curriculum from scratch
-
-**When to use:** Starting a brand new course
-
-**What it does:**
-- Researches the topic
-- Proposes learning objectives
-- Creates module structure
-- Generates syllabus and outlines
-
-**Example:**
-```bash
-/course-creation:design-course my-ai-course "AI literacy for employees"
-```
+3. **Verify installation** by typing `/course-creation:` or `/linkedin-posts:` in Claude Code
 
 ---
 
-#### 2️⃣ `/create-content` - Write Module Content
-**Purpose:** Write complete module content from your course design
+## 📦 Plugin 1: Course Creation
 
-**When to use:** After designing your course, to build each module
+### What It Does
 
-**What it does:**
-- Reads module outline
-- Researches content
-- Writes all sections
-- Adds citations
-- Creates engaging examples
+Transform Claude Code into a comprehensive course development assistant:
 
-**Example:**
+- ✅ **Design complete courses** from concept to curriculum
+- ✅ **Build engaging modules** with proper structure
+- ✅ **Review and improve** content quality
+- ✅ **Edit based on feedback** with learning system
+- ✅ **Extract documentation** from existing content
+- ✅ **Restructure courses** (split, merge, reorder)
+- ✅ **Analyze progression** across modules
+- ✅ **Format citations** consistently
+- ✅ **Detect duplicate content**
+
+### Main Commands
+
 ```bash
-/course-creation:create-content my-ai-course module 1
-/course-creation:create-content my-ai-course module 2
+/course-creation:design-course {name} "description"
+/course-creation:create-content {name} module {number}
+/course-creation:review {name} [module|all]
+/course-creation:edit {name} [--from-review]
+/course-creation:extract-course-info {name}
+/course-creation:restructure {name} "instruction"
 ```
 
----
-
-#### 3️⃣ `/review` - Review Content Quality
-**Purpose:** Check content quality and generate a comprehensive review report
-
-**When to use:** After writing content to check for issues
-
-**What it does:**
-- Analyzes page structure
-- Checks paragraph flow
-- Reviews sentence clarity
-- Validates citations
-- Detects duplicate content
-- Generates priority-ranked issues list
-
-**Scope options:**
-- Single file: `/review my-ai-course courses/my-ai-course/content/2_3_section.md`
-- Single module: `/review my-ai-course module 2`
-- All content: `/review my-ai-course all`
-
-**Example:**
-```bash
-/course-creation:review my-ai-course module 1
-```
-
----
-
-#### 4️⃣ `/edit` - Fix Issues
-**Purpose:** Edit content based on your comments OR review reports OR both
-
-**When to use:** To fix issues found in review, or to make changes based on your feedback
-
-**Three modes:**
-
-**Mode 1: Your inline comments**
-```bash
-# Add comments to your file:
-<!-- EDIT: Make this more concise -->
-<!-- FIX: Tone too casual -->
-
-# Then run:
-/course-creation:edit my-ai-course courses/my-ai-course/content/3_1_intro.md
-```
-
-**Mode 2: Auto-fix from review report**
-```bash
-# After running /review, automatically fix HIGH priority issues:
-/course-creation:edit my-ai-course --from-review
-```
-
-**Mode 3: Both combined**
-```bash
-# Fix your comments AND review issues:
-/course-creation:edit my-ai-course courses/my-ai-course/content/3_1_intro.md --from-review
-```
-
-**What it does:**
-- Extracts your comments from files
-- Reads review reports for issues
-- Logs all feedback for learning
-- Shows edit plan for approval
-- Makes comprehensive edits
-- Learns your preferences over time
-
----
-
-### Supporting Commands
-
-#### `/extract-course-info` - Analyze Existing Content
-**Purpose:** Extract structure, tone, and documentation from existing course content
-
-**When to use:** You have existing course content but no formal documentation
-
-**What it does:**
-- Scans all existing content files
-- Extracts module structure
-- Identifies topics and themes
-- Analyzes current tone and style
-- Generates syllabus from content
-- Creates module outlines
-- Builds research brief from citations
-
-**Example:**
-```bash
-/course-creation:extract-course-info my-ai-course
-```
-
----
-
-#### `/restructure` - Reorganize Course Structure
-**Purpose:** Change course organization (split, merge, or reorder modules)
-
-**When to use:** Need to reorganize your course structure
-
-**What it does:**
-- Reads current syllabus
-- Proposes structural changes
-- Validates with progression analyzer
-- Updates all affected files
-- Maintains content consistency
-
-**Examples:**
-```bash
-# Split a module
-/course-creation:restructure my-ai-course "split module 2 into 2A and 2B"
-
-# Reorder modules
-/course-creation:restructure my-ai-course "move module 3 before module 2"
-
-# Adjust time
-/course-creation:restructure my-ai-course "reduce total time to 40 minutes"
-```
-
----
-
-#### `/improve-workflow` - Meta Process Improvement
-**Purpose:** Analyze and improve your course creation workflow
-
-**When to use:** Want to optimize your plugin usage
-
-**What it does:**
-- Analyzes how you use commands
-- Reviews skill effectiveness
-- Identifies bottlenecks
-- Proposes workflow improvements
-- Suggests better practices
-
-**Example:**
-```bash
-/course-creation:improve-workflow
-```
-
----
-
-## 📝 Complete Workflow Examples
-
-### Example 1: Creating a New Course from Scratch
+### Quick Example
 
 ```bash
-# Step 1: Design the course
+# Create a new course
 /course-creation:design-course my-ai-course "AI literacy for employees"
 
-# Step 2: Create content for each module
+# Build the modules
 /course-creation:create-content my-ai-course module 1
-/course-creation:create-content my-ai-course module 2
-/course-creation:create-content my-ai-course module 3
 
-# Step 3: Review quality
+# Review quality
 /course-creation:review my-ai-course all
 
-# Step 4: Fix issues automatically
+# Fix issues
 /course-creation:edit my-ai-course --from-review
-
-# Optional: Restructure if needed
-/course-creation:restructure my-ai-course "split module 2"
 ```
+
+[📖 Full Course Creation Documentation](./plugins/course-creation/README.md)
 
 ---
 
-### Example 2: Working with Existing Content
+## 💼 Plugin 2: LinkedIn Posts
+
+### What It Does
+
+Create compelling LinkedIn posts with strategic guidance and proven structure:
+
+- ✅ **Profile-based writing** - Remembers your brand, voice, and goals
+- ✅ **Thought development** - Helps you move beyond surface-level ideas
+- ✅ **Strategic angles** - Suggests directions based on your objectives
+- ✅ **Atomic essay structure** - Uses Nicolas Cole's proven 4-piece format
+- ✅ **Guided workflow** - From inspiration to publish in 15-20 minutes
+- ✅ **Performance tracking** - Save posts with metadata for learning
+
+### Main Commands
 
 ```bash
-# Step 1: Extract documentation from existing content
+# One-time setup
+/linkedin-posts:setup-profile
+
+# Create posts
+/linkedin-posts:create
+```
+
+### How It Works
+
+1. **Setup once:** Tell the agent about your professional identity, goals, voice, and audience
+2. **Create posts:** The agent guides you through:
+   - Capturing what inspired you
+   - Developing your unique angle
+   - Writing a structured draft (headline, intro, main points, conclusion)
+   - Iterating until you're satisfied
+   - Saving with metadata
+
+### The Atomic Essay Structure
+
+Every post follows this proven format:
+- **Headline** (2-3 min): Clear, specific promise
+- **Intro** (4-5 min): 5-element checklist (what, who, promise, credibility, benefit)
+- **Main Points** (3-4 min): 1-3-1 pattern (topic, details, summary) × 3
+- **Conclusion** (1-2 min): Add NEW insight (don't recap)
+
+**Total time: 10-15 minutes of writing**
+
+### Quick Example
+
+```bash
+# First time setup
+/linkedin-posts:setup-profile
+
+# Create a post
+/linkedin-posts:create
+
+Agent: What inspired this post?
+You: I went to an AI conference where someone said AI will replace 80% of jobs...
+Agent: [Helps you develop your angle and writes a structured post]
+```
+
+[📖 Full LinkedIn Posts Documentation](./plugins/linkedin-posts/README.md)
+
+---
+
+## 🧰 Skills & Agents
+
+### Course Creation Skills
+- `page-structure-analyzer` - Overall page organization
+- `paragraph-flow-analyzer` - Idea flow and transitions
+- `sentence-clarity-checker` - Tone, clarity, simplicity
+- `citation-formatter` - Consistent citation formatting
+- `module-progression-analyzer` - Learning flow validation
+- `section-progression-analyzer` - Section-level flow
+- `duplicate-content-detector` - Redundancy detection
+- `style-extractor` - Style guide generation
+
+### LinkedIn Posts Skills
+- `atomic-essay-writer` - Nicolas Cole's 4-piece structure with 1-3-1 pattern
+
+### Agents
+- `editor-agent` (course-creation) - Comprehensive content editing
+- `post-creator-agent` (linkedin-posts) - Guided post creation workflow
+
+---
+
+## 💡 Usage Examples
+
+### Create a Course from Scratch
+
+```bash
+/course-creation:design-course ai-fundamentals "AI basics for managers"
+/course-creation:create-content ai-fundamentals module 1
+/course-creation:review ai-fundamentals module 1
+/course-creation:edit ai-fundamentals --from-review
+```
+
+### Create a LinkedIn Post
+
+```bash
+/linkedin-posts:setup-profile  # One time only
+/linkedin-posts:create          # Creates post with guided workflow
+```
+
+### Work with Existing Course Content
+
+```bash
 /course-creation:extract-course-info legacy-course
-
-# Step 2: Review the content
 /course-creation:review legacy-course all
-
-# Step 3: Fix issues
 /course-creation:edit legacy-course --from-review
-
-# Step 4: Make custom edits
-# Add your comments to files, then:
-/course-creation:edit legacy-course courses/legacy-course/content/section1.md
 ```
 
 ---
 
-### Example 3: Iterative Editing with Learning
+## 📁 Project Structure
 
-```bash
-# First round: Add comments to a file
-<!-- EDIT: Too technical, simplify -->
-<!-- FIX: Add real-world example -->
-
-/course-creation:edit my-ai-course courses/my-ai-course/content/module1.md
-
-# Second round: Different file, but plugin remembers your preferences
-/course-creation:edit my-ai-course courses/my-ai-course/content/module2.md
-# Plugin now knows you prefer simpler language and real-world examples!
+```
+claude-code-writer-plugins/
+├── .claude-plugin/
+│   └── marketplace.json              # Marketplace configuration
+├── plugins/
+│   ├── course-creation/              # Course creation plugin
+│   │   ├── .claude-plugin/
+│   │   │   └── plugin.json
+│   │   ├── commands/                 # Slash commands
+│   │   ├── skills/                   # Specialized analysis tools
+│   │   └── agents/                   # Background workers
+│   │
+│   └── linkedin-posts/               # LinkedIn posts plugin
+│       ├── .claude-plugin/
+│       │   └── plugin.json
+│       ├── commands/                 # Slash commands
+│       ├── skills/                   # Writing methodology
+│       └── agents/                   # Post creator
+│
+└── README.md                         # This file
 ```
 
 ---
 
-## 🧰 Skills Reference
+## 🛠️ File Organization (Generated)
 
-Specialized analysis tools that activate automatically when needed:
-
-### Content Quality Skills
-- **page-structure-analyzer** - Evaluate overall page structure and readability
-- **paragraph-flow-analyzer** - Check paragraph structure and idea flow
-- **sentence-clarity-checker** - Analyze sentences for tone, clarity, and simplicity
-- **citation-formatter** - Format citations using bracketed numbers with references
-
-### Course Structure Skills
-- **module-progression-analyzer** - Ensure logical learning flow between modules
-- **section-progression-analyzer** - Analyze section-to-section progression within modules
-- **duplicate-content-detector** - Find and flag redundant content across pages
-
-### Utilities
-- **style-extractor** - Learn writing style from examples and generate style guides
-
-**To invoke a skill manually:**
-```bash
-Skill citation-formatter
-Skill duplicate-content-detector
-```
-
----
-
-## 🤖 Agents
-
-Background workers for complex tasks:
-
-- **editor-agent** - Comprehensive content editor that uses all skills to improve structure, flow, clarity, and citations
-
-Agents run autonomously and report back with results. They're invoked automatically by commands but you can also launch them directly using the Task tool.
-
----
-
-## 📊 Learning System
-
-The `/edit` command builds a learning history:
-
-**How it works:**
-1. Every time you run `/edit`, your comments are logged
-2. Comments are stored in `courses/{COURSE}/.edit-history/comments-log.jsonl`
-3. Future edits analyze this history to understand your preferences
-4. The style guide evolves based on your actual feedback patterns
-
-**What gets learned:**
-- Your tone preferences
-- Common issues you flag
-- Your structural preferences
-- Spelling and citation standards you prefer
-
-**Benefits:**
-- Edits become more aligned with your style over time
-- Less repetitive feedback needed
-- Proactive identification of issues you care about
-- Data-driven style guide improvements
-
----
-
-## 🛠️ File Structure
-
-After using this plugin, your course will be organized like this:
+### Course Creation Output
 
 ```
 courses/
-  my-ai-course/
-    content/                    # Your course content files
-      1_1_intro.md
-      1_2_section.md
-      2_1_section.md
-      ...
-    docs/                       # Course documentation
-      course-syllabus.md
-      style-guide.md
-      target-audience.md
-      module-outlines/
-        module_1_outline.md
-        module_2_outline.md
-        ...
-    .edit-history/              # Learning history (auto-generated)
-      comments-log.jsonl        # All your past feedback
-      backups/                  # Timestamped backups
+  {course-name}/
+    content/                          # Course content files
+    docs/                             # Documentation & guides
+    .edit-history/                    # Learning history
+```
+
+### LinkedIn Posts Output
+
+```
+linkedin-profile.md                   # Your profile (one time)
+linkedin-posts/                       # Saved posts with metadata
+  2025-01-27-topic-name.md
+  2025-01-28-topic-name.md
 ```
 
 ---
 
-## 💡 Tips & Best Practices
+## 💡 Best Practices
 
-### 1. Follow the Numbered Workflow
-For new courses, use commands 1→2→3→4 in order for best results.
+### Course Creation
+1. Follow the numbered workflow (1→2→3→4) for new courses
+2. Use inline comments (`<!-- EDIT: ... -->`) for precise control
+3. Review before editing with `--from-review`
+4. Let the plugin learn from your feedback patterns
 
-### 2. Use Comments for Precise Control
-Add inline comments to guide edits exactly where you want them:
-```markdown
-<!-- EDIT: Add citation here -->
-<!-- FIX: Simplify this paragraph -->
-```
-
-### 3. Review Before Editing
-Always run `/review` before `/edit --from-review` to see what will be changed.
-
-### 4. Iterate in Small Steps
-Make small, incremental edits. Review after each change.
-
-### 5. Let the Plugin Learn
-The more you use `/edit` with comments, the smarter it gets about your preferences.
-
-### 6. Use Extract for Legacy Content
-Have old course materials? Use `/extract-course-info` to bring them into the plugin's structure.
-
-### 7. Restructure Carefully
-Before running `/restructure`, make sure you have backups. It changes file names and references.
+### LinkedIn Posts
+1. Set up your profile first for consistent brand voice
+2. Don't rush to writing - develop your thinking first
+3. Follow the atomic essay structure consistently
+4. Track performance data to learn what works
 
 ---
 
@@ -414,11 +261,17 @@ Before running `/restructure`, make sure you have backups. It changes file names
 
 Found a bug or have a feature request? Please open an issue or submit a pull request!
 
+### Ideas for Future Plugins
+- Email newsletter creation
+- Blog post writing
+- Twitter thread generation
+- Presentation slide content
+
 ---
 
 ## 📄 License
 
-MIT License - Feel free to use and modify for your educational content creation needs.
+MIT License - Feel free to use and modify for your content creation needs.
 
 ---
 
@@ -426,6 +279,7 @@ MIT License - Feel free to use and modify for your educational content creation 
 
 **Arvin**
 Email: febrification@gmail.com
+GitHub: [@febriy](https://github.com/febriy)
 
 ---
 
