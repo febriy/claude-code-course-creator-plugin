@@ -1,0 +1,9 @@
+{
+    "name": "linkedin-posts",
+    "description": "Commands, Skills, and Tools for creating engaging LinkedIn posts and social media content.",
+    "version": "1.0.0",
+    "author": {
+        "name": "Arvin",
+        "email": "febrification@gmail.com"
+    }
+}

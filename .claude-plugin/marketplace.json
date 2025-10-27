@@ -1,13 +1,13 @@
 {
-    "name": "arvins-course-content-writer-marketplace",
+    "name": "arvins-content-creation-marketplace",
     "owner": {
         "name": "Arvin",
         "email": "febrification@gmail.com",
         "url": "https://github.com/febriy"
     },
     "metadata": {
-        "description": "Marketplace for creating educational course content and learning materials.",
-        "version": "1.0.0"
+        "description": "Marketplace for creating educational and professional content - courses, LinkedIn posts, and learning materials.",
+        "version": "1.1.0"
     },
     "plugins": [
         {
@@ -22,6 +22,21 @@
                 "learning",
                 "content creation",
                 "teaching"
+            ]
+        },
+        {
+            "name": "linkedin-posts",
+            "source": "./plugins/linkedin-posts",
+            "description": "Commands, Skills, and Agents for creating engaging LinkedIn posts and social media content using atomic essay methodology.",
+            "version": "1.0.0",
+            "category": "social-media",
+            "keywords": [
+                "linkedin",
+                "social media",
+                "content creation",
+                "writing",
+                "atomic essay",
+                "personal brand"
             ]
         }
     ]
